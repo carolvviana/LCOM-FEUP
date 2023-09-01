@@ -1,0 +1,9 @@
+<map id="gameWinController" name="gameWinController">
+<area shape="rect" id="node1" title="Controller of the game win state." alt="" coords="5,56,137,83"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#a339183e6cac2eed6ab617075776050a3" title="Draws the game win menu on the screen." alt="" coords="185,5,298,32"/>
+<area shape="rect" id="node5" href="$viewer_8c.html#ac15d63a0b643d163c8843988fd299fec" title="Draws the time on the screen." alt="" coords="201,56,282,83"/>
+<area shape="rect" id="node7" href="$gpu_8c.html#ae1a99ee23f3b94cac3562bc674209ec3" title="Passes the new buffer contents to the main buffer." alt="" coords="197,107,286,133"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9" title="Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the ..." alt="" coords="366,5,446,32"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="513,5,596,32"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#a8690cdc2f16db4e1e85454c7bf4d3375" title=" " alt="" coords="346,56,465,83"/>
+</map>

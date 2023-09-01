@@ -1,0 +1,4 @@
+<map id="draw_hor_line" name="draw_hor_line">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,106,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="154,5,236,32"/>
+</map>

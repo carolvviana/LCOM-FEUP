@@ -1,0 +1,190 @@
+\hypertarget{mouse_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/kbd\+\_\+mouse/mouse.h File Reference}
+\label{mouse_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.h}}
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for mouse.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{mouse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Reads and stores the mouse packet. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_ab268c1a22ae38f5545d1e0daa9a5b258}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables Mouse interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes Mouse interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_aabb0fc34ade37c0596dd032fc37f8638}{mouse\+\_\+bytes\+\_\+to\+\_\+packet}} (struct packet $\ast$\mbox{\hyperlink{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}})
+\begin{DoxyCompactList}\small\item\em Saves the mouse packet in a struct. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a6e47b03ed89aa760792292a19d5c1c3d}{mouse\+\_\+write}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Writes a command to the KBC. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_adf8110bd3c7f35c866859f247eb1484c}{KBC\+\_\+read\+\_\+output\+\_\+mouse}} (uint8\+\_\+t port, uint8\+\_\+t $\ast$output)
+\begin{DoxyCompactList}\small\item\em Tries to read the KBC output buffer and stores it in the variable output. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_af3cd440f42d85a42d18c24aff3f13729}{KBC\+\_\+write\+\_\+cmd}} (uint8\+\_\+t port, uint8\+\_\+t cmd\+Byte)
+\begin{DoxyCompactList}\small\item\em Tries to write a command to the KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8h_adf8110bd3c7f35c866859f247eb1484c}\label{mouse_8h_adf8110bd3c7f35c866859f247eb1484c}} 
+\index{mouse.h@{mouse.h}!KBC\_read\_output\_mouse@{KBC\_read\_output\_mouse}}
+\index{KBC\_read\_output\_mouse@{KBC\_read\_output\_mouse}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_read\_output\_mouse()}{KBC\_read\_output\_mouse()}}
+{\footnotesize\ttfamily int() KBC\+\_\+read\+\_\+output\+\_\+mouse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Tries to read the KBC output buffer and stores it in the variable output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & variable that will store the mouse hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{mouse_8h_adf8110bd3c7f35c866859f247eb1484c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_af3cd440f42d85a42d18c24aff3f13729}\label{mouse_8h_af3cd440f42d85a42d18c24aff3f13729}} 
+\index{mouse.h@{mouse.h}!KBC\_write\_cmd@{KBC\_write\_cmd}}
+\index{KBC\_write\_cmd@{KBC\_write\_cmd}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_write\_cmd()}{KBC\_write\_cmd()}}
+{\footnotesize\ttfamily int() KBC\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{cmd\+Byte }\end{DoxyParamCaption})}
+
+
+
+Tries to write a command to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & port to be written \\
+\hline
+{\em cmd\+Byte} & command to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise
+\end{DoxyReturn}
+Tries to write a command to the KBC.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Byte} & command to be written \\
+\hline
+{\em port} & port to write the command to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{mouse_8h_af3cd440f42d85a42d18c24aff3f13729_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_aabb0fc34ade37c0596dd032fc37f8638}\label{mouse_8h_aabb0fc34ade37c0596dd032fc37f8638}} 
+\index{mouse.h@{mouse.h}!mouse\_bytes\_to\_packet@{mouse\_bytes\_to\_packet}}
+\index{mouse\_bytes\_to\_packet@{mouse\_bytes\_to\_packet}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_bytes\_to\_packet()}{mouse\_bytes\_to\_packet()}}
+{\footnotesize\ttfamily void() mouse\+\_\+bytes\+\_\+to\+\_\+packet (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{mouse\+\_\+packet }\end{DoxyParamCaption})}
+
+
+
+Saves the mouse packet in a struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+\_\+packet} & struct that will store the mouse packet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.h@{mouse.h}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads and stores the mouse packet. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a210374b50462acdedab00df64d5cea3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_ab268c1a22ae38f5545d1e0daa9a5b258}\label{mouse_8h_ab268c1a22ae38f5545d1e0daa9a5b258}} 
+\index{mouse.h@{mouse.h}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables Mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & variable that will store the mouse hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.h@{mouse.h}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes Mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a6e47b03ed89aa760792292a19d5c1c3d}\label{mouse_8h_a6e47b03ed89aa760792292a19d5c1c3d}} 
+\index{mouse.h@{mouse.h}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int() mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & command to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a6e47b03ed89aa760792292a19d5c1c3d_cgraph}
+\end{center}
+\end{figure}

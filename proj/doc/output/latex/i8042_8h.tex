@@ -1,0 +1,231 @@
+\hypertarget{i8042_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/kbd\+\_\+mouse/i8042.h File Reference}
+\label{i8042_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/i8042.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/i8042.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i8042_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a0b7569cda71298859ffb6ea55c03a36a}{IRQ\+\_\+\+KBD}}~1
+\begin{DoxyCompactList}\small\item\em IRQLine for keyboard. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a32ffe73ffc337fbec467ea02948591af}{IRQ\+\_\+\+MOUSE}}~12
+\begin{DoxyCompactList}\small\item\em IRQLine for mouse. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a9b4f59fc9220530978f12905fe51b1d0}{ESC\+\_\+\+KEY}}~0x81
+\begin{DoxyCompactList}\small\item\em ESC key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a1c34fc6f48366ae6334736730fd9b0e7}{UP\+\_\+\+KEY}}~0x48
+\begin{DoxyCompactList}\small\item\em UP key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a687b69f632086f6e1a03279964257c24}{DOWN\+\_\+\+KEY}}~0x50
+\begin{DoxyCompactList}\small\item\em DOWN key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a3cd87a710fd069baf487e7b44d01e1b9}{LEFT\+\_\+\+KEY}}~0x4B
+\begin{DoxyCompactList}\small\item\em LEFT key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a1cc261de4fdcbf43464428947a52ce32}{RIGHT\+\_\+\+KEY}}~0x4D
+\begin{DoxyCompactList}\small\item\em RIGHT key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_afba17fd121bcd7abc852f1ae1f3abb58}{ENTER\+\_\+\+KEY}}~0x1C
+\begin{DoxyCompactList}\small\item\em ENTER key scancode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a145e72849cd76461202c6ea49815956d}{KBD\+\_\+\+OUT\+\_\+\+CMD}}~0x60
+\begin{DoxyCompactList}\small\item\em KBD output buffer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a00c43dbf3d90a5d836f812f91168bea5}{KBD\+\_\+\+IN\+\_\+\+CMD}}~0x64
+\begin{DoxyCompactList}\small\item\em KBD input buffer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}{KBC\+\_\+\+STATUS\+\_\+\+REG}}~0x64
+\begin{DoxyCompactList}\small\item\em KBC Status Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}{KBC\+\_\+\+WRITE\+\_\+\+CMD}}~0x60
+\begin{DoxyCompactList}\small\item\em KBC Write Command byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a595a5cad2d3c793963da50865b2c1b47}{KBC\+\_\+\+READ\+\_\+\+CMD}}~0x20
+\begin{DoxyCompactList}\small\item\em KBC Read Command Byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a985b81fac849edcf6562a6ac320b8865}{KBC\+\_\+\+INPUTB\+\_\+\+FULL}}~BIT(1)
+\begin{DoxyCompactList}\small\item\em Input buffer full bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a6d6ee27e3d64d5b952228d53a34b3775}{KBC\+\_\+\+OUTPUTB\+\_\+\+FULL}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Output buffer full bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}{PARITY\+\_\+\+ERR}}~BIT(7)
+\begin{DoxyCompactList}\small\item\em Parity Error bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_a9433449a20ede66ed57354ca3332a019}{TIMEOUT\+\_\+\+ERR}}~BIT(6)
+\begin{DoxyCompactList}\small\item\em Timeout Error bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i8042_8h_afa70687e6442c6f4c9eb8eec2a9268c5}{ENABLE\+\_\+\+KBD\+\_\+\+INT}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Enable keyboard intrrupts bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{i8042_8h_a687b69f632086f6e1a03279964257c24}\label{i8042_8h_a687b69f632086f6e1a03279964257c24}} 
+\index{i8042.h@{i8042.h}!DOWN\_KEY@{DOWN\_KEY}}
+\index{DOWN\_KEY@{DOWN\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DOWN\_KEY}{DOWN\_KEY}}
+{\footnotesize\ttfamily \#define DOWN\+\_\+\+KEY~0x50}
+
+
+
+DOWN key scancode. 
+
+\mbox{\Hypertarget{i8042_8h_afa70687e6442c6f4c9eb8eec2a9268c5}\label{i8042_8h_afa70687e6442c6f4c9eb8eec2a9268c5}} 
+\index{i8042.h@{i8042.h}!ENABLE\_KBD\_INT@{ENABLE\_KBD\_INT}}
+\index{ENABLE\_KBD\_INT@{ENABLE\_KBD\_INT}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_KBD\_INT}{ENABLE\_KBD\_INT}}
+{\footnotesize\ttfamily \#define ENABLE\+\_\+\+KBD\+\_\+\+INT~BIT(0)}
+
+
+
+Enable keyboard intrrupts bit. 
+
+\mbox{\Hypertarget{i8042_8h_afba17fd121bcd7abc852f1ae1f3abb58}\label{i8042_8h_afba17fd121bcd7abc852f1ae1f3abb58}} 
+\index{i8042.h@{i8042.h}!ENTER\_KEY@{ENTER\_KEY}}
+\index{ENTER\_KEY@{ENTER\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_KEY}{ENTER\_KEY}}
+{\footnotesize\ttfamily \#define ENTER\+\_\+\+KEY~0x1C}
+
+
+
+ENTER key scancode. 
+
+\mbox{\Hypertarget{i8042_8h_a9b4f59fc9220530978f12905fe51b1d0}\label{i8042_8h_a9b4f59fc9220530978f12905fe51b1d0}} 
+\index{i8042.h@{i8042.h}!ESC\_KEY@{ESC\_KEY}}
+\index{ESC\_KEY@{ESC\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_KEY}{ESC\_KEY}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+KEY~0x81}
+
+
+
+ESC key scancode. 
+
+\mbox{\Hypertarget{i8042_8h_a0b7569cda71298859ffb6ea55c03a36a}\label{i8042_8h_a0b7569cda71298859ffb6ea55c03a36a}} 
+\index{i8042.h@{i8042.h}!IRQ\_KBD@{IRQ\_KBD}}
+\index{IRQ\_KBD@{IRQ\_KBD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_KBD}{IRQ\_KBD}}
+{\footnotesize\ttfamily \#define IRQ\+\_\+\+KBD~1}
+
+
+
+IRQLine for keyboard. 
+
+\mbox{\Hypertarget{i8042_8h_a32ffe73ffc337fbec467ea02948591af}\label{i8042_8h_a32ffe73ffc337fbec467ea02948591af}} 
+\index{i8042.h@{i8042.h}!IRQ\_MOUSE@{IRQ\_MOUSE}}
+\index{IRQ\_MOUSE@{IRQ\_MOUSE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_MOUSE}{IRQ\_MOUSE}}
+{\footnotesize\ttfamily \#define IRQ\+\_\+\+MOUSE~12}
+
+
+
+IRQLine for mouse. 
+
+\mbox{\Hypertarget{i8042_8h_a985b81fac849edcf6562a6ac320b8865}\label{i8042_8h_a985b81fac849edcf6562a6ac320b8865}} 
+\index{i8042.h@{i8042.h}!KBC\_INPUTB\_FULL@{KBC\_INPUTB\_FULL}}
+\index{KBC\_INPUTB\_FULL@{KBC\_INPUTB\_FULL}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_INPUTB\_FULL}{KBC\_INPUTB\_FULL}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+INPUTB\+\_\+\+FULL~BIT(1)}
+
+
+
+Input buffer full bit. 
+
+\mbox{\Hypertarget{i8042_8h_a6d6ee27e3d64d5b952228d53a34b3775}\label{i8042_8h_a6d6ee27e3d64d5b952228d53a34b3775}} 
+\index{i8042.h@{i8042.h}!KBC\_OUTPUTB\_FULL@{KBC\_OUTPUTB\_FULL}}
+\index{KBC\_OUTPUTB\_FULL@{KBC\_OUTPUTB\_FULL}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_OUTPUTB\_FULL}{KBC\_OUTPUTB\_FULL}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+OUTPUTB\+\_\+\+FULL~BIT(0)}
+
+
+
+Output buffer full bit. 
+
+\mbox{\Hypertarget{i8042_8h_a595a5cad2d3c793963da50865b2c1b47}\label{i8042_8h_a595a5cad2d3c793963da50865b2c1b47}} 
+\index{i8042.h@{i8042.h}!KBC\_READ\_CMD@{KBC\_READ\_CMD}}
+\index{KBC\_READ\_CMD@{KBC\_READ\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_READ\_CMD}{KBC\_READ\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+READ\+\_\+\+CMD~0x20}
+
+
+
+KBC Read Command Byte. 
+
+\mbox{\Hypertarget{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}\label{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}} 
+\index{i8042.h@{i8042.h}!KBC\_STATUS\_REG@{KBC\_STATUS\_REG}}
+\index{KBC\_STATUS\_REG@{KBC\_STATUS\_REG}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STATUS\_REG}{KBC\_STATUS\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STATUS\+\_\+\+REG~0x64}
+
+
+
+KBC Status Register. 
+
+\mbox{\Hypertarget{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}\label{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}} 
+\index{i8042.h@{i8042.h}!KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}}
+\index{KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_WRITE\_CMD}{KBC\_WRITE\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+WRITE\+\_\+\+CMD~0x60}
+
+
+
+KBC Write Command byte. 
+
+\mbox{\Hypertarget{i8042_8h_a00c43dbf3d90a5d836f812f91168bea5}\label{i8042_8h_a00c43dbf3d90a5d836f812f91168bea5}} 
+\index{i8042.h@{i8042.h}!KBD\_IN\_CMD@{KBD\_IN\_CMD}}
+\index{KBD\_IN\_CMD@{KBD\_IN\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_IN\_CMD}{KBD\_IN\_CMD}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IN\+\_\+\+CMD~0x64}
+
+
+
+KBD input buffer. 
+
+\mbox{\Hypertarget{i8042_8h_a145e72849cd76461202c6ea49815956d}\label{i8042_8h_a145e72849cd76461202c6ea49815956d}} 
+\index{i8042.h@{i8042.h}!KBD\_OUT\_CMD@{KBD\_OUT\_CMD}}
+\index{KBD\_OUT\_CMD@{KBD\_OUT\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_OUT\_CMD}{KBD\_OUT\_CMD}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+OUT\+\_\+\+CMD~0x60}
+
+
+
+KBD output buffer. 
+
+\mbox{\Hypertarget{i8042_8h_a3cd87a710fd069baf487e7b44d01e1b9}\label{i8042_8h_a3cd87a710fd069baf487e7b44d01e1b9}} 
+\index{i8042.h@{i8042.h}!LEFT\_KEY@{LEFT\_KEY}}
+\index{LEFT\_KEY@{LEFT\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{LEFT\_KEY}{LEFT\_KEY}}
+{\footnotesize\ttfamily \#define LEFT\+\_\+\+KEY~0x4B}
+
+
+
+LEFT key scancode. 
+
+\mbox{\Hypertarget{i8042_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}\label{i8042_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}} 
+\index{i8042.h@{i8042.h}!PARITY\_ERR@{PARITY\_ERR}}
+\index{PARITY\_ERR@{PARITY\_ERR}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERR}{PARITY\_ERR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERR~BIT(7)}
+
+
+
+Parity Error bit. 
+
+\mbox{\Hypertarget{i8042_8h_a1cc261de4fdcbf43464428947a52ce32}\label{i8042_8h_a1cc261de4fdcbf43464428947a52ce32}} 
+\index{i8042.h@{i8042.h}!RIGHT\_KEY@{RIGHT\_KEY}}
+\index{RIGHT\_KEY@{RIGHT\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_KEY}{RIGHT\_KEY}}
+{\footnotesize\ttfamily \#define RIGHT\+\_\+\+KEY~0x4D}
+
+
+
+RIGHT key scancode. 
+
+\mbox{\Hypertarget{i8042_8h_a9433449a20ede66ed57354ca3332a019}\label{i8042_8h_a9433449a20ede66ed57354ca3332a019}} 
+\index{i8042.h@{i8042.h}!TIMEOUT\_ERR@{TIMEOUT\_ERR}}
+\index{TIMEOUT\_ERR@{TIMEOUT\_ERR}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_ERR}{TIMEOUT\_ERR}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+ERR~BIT(6)}
+
+
+
+Timeout Error bit. 
+
+\mbox{\Hypertarget{i8042_8h_a1c34fc6f48366ae6334736730fd9b0e7}\label{i8042_8h_a1c34fc6f48366ae6334736730fd9b0e7}} 
+\index{i8042.h@{i8042.h}!UP\_KEY@{UP\_KEY}}
+\index{UP\_KEY@{UP\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{UP\_KEY}{UP\_KEY}}
+{\footnotesize\ttfamily \#define UP\+\_\+\+KEY~0x48}
+
+
+
+UP key scancode. 
+

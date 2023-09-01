@@ -1,0 +1,75 @@
+\hypertarget{controller_8h_source}{}\doxysection{controller.\+h}
+\label{controller_8h_source}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.h}}
+\mbox{\hyperlink{controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}../gpu/gpu.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../kbd\_mouse/kbd.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../kbd\_mouse/mouse.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../rtc/rtc.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../serialport/serialport.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{model_8h}{model.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{viewer_8h}{viewer.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{xpms_8h}{xpms.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define REFRESH\_RATE (60 / 30)}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#  define DEBUG\_MSG(...) printf("{}[DEBUG] \%s:\%d: "{}}, \_\_FILE\_\_, \_\_LINE\_\_); \(\backslash\)}
+\DoxyCodeLine{17                          printf(\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{18                          printf("{}\(\backslash\)n"{});}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#  define DEBUG\_MSG(...)}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28 \textcolor{keyword}{enum} \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8ae}{devices}} \{}
+\DoxyCodeLine{29   \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea17ba9bae1b8d7e8d6c12d46ec58e0769}{TIMER}},     }
+\DoxyCodeLine{30   \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aead14e2514427609da194a72091721f4c7}{KEYBOARD}},  }
+\DoxyCodeLine{31   \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}},     }
+\DoxyCodeLine{32   \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea24073a11916b946561b8cb5c9dfe9bce}{RTC}},       }
+\DoxyCodeLine{33   \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea303393a7eb9e8c9e401f78471510cde3}{SERIALPORT}} }
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}{game\_states}} \{}
+\DoxyCodeLine{41   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}{MENU}},               }
+\DoxyCodeLine{42   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60ad03008f18d2c8eef7043f88285f6e112}{SINGLE\_PLAYER\_GAME}}, }
+\DoxyCodeLine{43   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a9cfcffdf6beb1710c6070a86a4251bc5}{MULTI\_PLAYER\_GAME}},  }
+\DoxyCodeLine{44   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a243297a16ab0d9b44d34b1b7511159ad}{WAITING\_CONNECTION}}, }
+\DoxyCodeLine{45   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acb9e6f410cf374803d7ff561a15bc4ef}{CREDITS}},            }
+\DoxyCodeLine{46   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a871723195985a4ae22d7e10d99bf8a00}{GAME\_OVER}},          }
+\DoxyCodeLine{47   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acba52b1e8f4f19033175ea75a453388c}{GAME\_WIN}},           }
+\DoxyCodeLine{48   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a376c1b6a3f75d283a2efacf737438d61}{BLOCKED}},             }
+\DoxyCodeLine{49   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a44107b3a6a5f3877d31c9946fb8bf911}{NONE\_STATE}},         }
+\DoxyCodeLine{50   \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}},               }
+\DoxyCodeLine{51 \} \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\_state\_t}};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{59 \textcolor{keyword}{struct }\mbox{\hyperlink{structstate}{state}} \{}
+\DoxyCodeLine{60   \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\_state\_t}} \mbox{\hyperlink{structstate_a76708844828e7aa85e43b7e3a6779293}{state}};             }
+\DoxyCodeLine{61   void (*\mbox{\hyperlink{structstate_acb13163e13d13d7a1e977b9d8b2fcae1}{controller}})(\textcolor{keywordtype}{int} device); }
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67 \textcolor{keyword}{struct }\mbox{\hyperlink{structstate}{state}} \mbox{\hyperlink{controller_8h_abcb256a1de87813aaeac21222883be6b}{game\_states\_list}}[11];}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74 void(\mbox{\hyperlink{controller_8h_afa591ec10165f04e9291e6592a0f7510}{menuController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81 void(\mbox{\hyperlink{controller_8h_a37e49d800adbc835666794ce4e9cce58}{singlePlayerController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88 void(\mbox{\hyperlink{controller_8h_a512eab05844c70937d5eda8a40f47884}{waitingConnectionController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{95 void(\mbox{\hyperlink{controller_8h_a9b32f04a33bcc2480d7a65173ff4634d}{multiPlayerController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{102 void(\mbox{\hyperlink{controller_8h_a3436a32f39e1fc40a322fa92edb7c107}{creditsController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{109 void(\mbox{\hyperlink{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c}{gameOverController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{116 void(\mbox{\hyperlink{controller_8h_a6aaefbda93187a03caf0d0ebc62d09bc}{blockedController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 }
+\DoxyCodeLine{124 void(\mbox{\hyperlink{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c}{gameOverController}})(\textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{131 void(\mbox{\hyperlink{controller_8h_ab2e074c3d3b5a78c93bcb0a574f95037}{gameWinController}})(\textcolor{keywordtype}{int} device);}
+
+\end{DoxyCode}

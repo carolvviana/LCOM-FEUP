@@ -1,0 +1,131 @@
+\hypertarget{kbd_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/kbd\+\_\+mouse/kbd.h File Reference}
+\label{kbd_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/kbd.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/kbd.h}}
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+Include dependency graph for kbd.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{kbd_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{kbd_8h_a1cd38040f41a566c4405b2edcce32389}{kbd\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables keyboard interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{kbd_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Reads the scancode from the output buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbd_8h_aee0a7b54ee426fade9c780418d110fe0}{kbd\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbd_8h_afa20398065dbe981924bee1887ec38f1}{KBC\+\_\+read\+\_\+output\+\_\+keyboard}} (uint8\+\_\+t $\ast$output)
+\begin{DoxyCompactList}\small\item\em Reads the output buffer of the KBC for keyboard information. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbd_8h_af3cd440f42d85a42d18c24aff3f13729}{KBC\+\_\+write\+\_\+cmd}} (uint8\+\_\+t port, uint8\+\_\+t cmd\+Byte)
+\begin{DoxyCompactList}\small\item\em Writes a command to the KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kbd_8h_aea970a154161a35f6894898a092ed70a}\label{kbd_8h_aea970a154161a35f6894898a092ed70a}} 
+\index{kbd.h@{kbd.h}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!kbd.h@{kbd.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the scancode from the output buffer. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd_8h_aea970a154161a35f6894898a092ed70a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbd_8h_afa20398065dbe981924bee1887ec38f1}\label{kbd_8h_afa20398065dbe981924bee1887ec38f1}} 
+\index{kbd.h@{kbd.h}!KBC\_read\_output\_keyboard@{KBC\_read\_output\_keyboard}}
+\index{KBC\_read\_output\_keyboard@{KBC\_read\_output\_keyboard}!kbd.h@{kbd.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_read\_output\_keyboard()}{KBC\_read\_output\_keyboard()}}
+{\footnotesize\ttfamily int() KBC\+\_\+read\+\_\+output\+\_\+keyboard (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Reads the output buffer of the KBC for keyboard information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & pointer to the variable where the scancode will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{kbd_8h_afa20398065dbe981924bee1887ec38f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbd_8h_af3cd440f42d85a42d18c24aff3f13729}\label{kbd_8h_af3cd440f42d85a42d18c24aff3f13729}} 
+\index{kbd.h@{kbd.h}!KBC\_write\_cmd@{KBC\_write\_cmd}}
+\index{KBC\_write\_cmd@{KBC\_write\_cmd}!kbd.h@{kbd.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_write\_cmd()}{KBC\_write\_cmd()}}
+{\footnotesize\ttfamily int() KBC\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{cmd\+Byte }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Byte} & command to be written \\
+\hline
+{\em port} & port to write the command to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbd_8h_a1cd38040f41a566c4405b2edcce32389}\label{kbd_8h_a1cd38040f41a566c4405b2edcce32389}} 
+\index{kbd.h@{kbd.h}!kbd\_subscribe\_int@{kbd\_subscribe\_int}}
+\index{kbd\_subscribe\_int@{kbd\_subscribe\_int}!kbd.h@{kbd.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_subscribe\_int()}{kbd\_subscribe\_int()}}
+{\footnotesize\ttfamily int() kbd\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables keyboard interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & variable that will store the keyboard hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbd_8h_aee0a7b54ee426fade9c780418d110fe0}\label{kbd_8h_aee0a7b54ee426fade9c780418d110fe0}} 
+\index{kbd.h@{kbd.h}!kbd\_unsubscribe\_int@{kbd\_unsubscribe\_int}}
+\index{kbd\_unsubscribe\_int@{kbd\_unsubscribe\_int}!kbd.h@{kbd.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_unsubscribe\_int()}{kbd\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() kbd\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}

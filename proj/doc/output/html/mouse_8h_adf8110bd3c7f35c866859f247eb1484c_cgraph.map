@@ -1,0 +1,4 @@
+<map id="KBC_read_output_mouse" name="KBC_read_output_mouse">
+<area shape="rect" id="node1" title="Tries to read the KBC output buffer and stores it in the variable output." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="223,5,313,32"/>
+</map>

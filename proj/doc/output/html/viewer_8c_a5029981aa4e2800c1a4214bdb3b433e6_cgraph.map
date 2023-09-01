@@ -1,0 +1,5 @@
+<map id="draw_player" name="draw_player">
+<area shape="rect" id="node1" title="Draws a player on the screen." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a64d85a0174c3326d71ff220420c52ba8" title="Draws a rectangle with the given dimensions and color, starting in the given coordinates." alt="" coords="144,5,221,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="269,5,351,32"/>
+</map>

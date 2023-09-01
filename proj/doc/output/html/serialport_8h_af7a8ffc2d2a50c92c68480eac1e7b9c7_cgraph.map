@@ -1,0 +1,6 @@
+<map id="read_status_serialp" name="read_status_serialp">
+<area shape="rect" id="node1" title="Reads the status of the serial port from Line Status Register and checks if there are no errors." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$serialport_8c.html#af0b7fadf66deb5979674e1ff80e31129" title="Checks if the parameter status does not have Parity, overrun or framing errors." alt="" coords="188,5,322,32"/>
+<area shape="rect" id="node3" href="$serialport_8c.html#a837ae217c80e9748327e27e8cac6e1e4" title="Reads the status of the serial port from the LSR." alt="" coords="191,56,319,83"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="370,56,460,83"/>
+</map>

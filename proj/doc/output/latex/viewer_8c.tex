@@ -1,0 +1,350 @@
+\hypertarget{viewer_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/mvc/viewer.c File Reference}
+\label{viewer_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/viewer.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/viewer.c}}
+{\ttfamily \#include \char`\"{}viewer.\+h\char`\"{}}\newline
+Include dependency graph for viewer.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{viewer_8c_a8b436345808e86cfdb278061a65a0fe7}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm menu image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a7312ae0798b69b9b882f214132f3125c}{draw\+\_\+mouse}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm mouse image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_aa893dae372893c0c5e18d64bef95c4fd}{draw\+\_\+arena}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm arena image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_ace4a787485fde7f2051d0e29557f0ded}{draw\+\_\+arena\+\_\+multiplayer}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm arena image on the screen for multiplayer mode. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a76989dacbf445d8b567e056ab1ee26a1}{draw\+\_\+credits}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm \char`\"{}credits/instructions\char`\"{} menu image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a495eeaaf495298ec57be90643ed070ff}{draw\+\_\+background}} (uint32\+\_\+t $\ast$color)
+\begin{DoxyCompactList}\small\item\em Draws a background on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a5029981aa4e2800c1a4214bdb3b433e6}{draw\+\_\+player}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Draws a player on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a1b4d3b8e3ca33e20507f358be08f4645}{draw\+\_\+ball}} (struct \mbox{\hyperlink{struct_ball}{Ball}} $\ast$\mbox{\hyperlink{controller_8c_aec7d031690b4f8260cedcca03ddc1854}{ball}})
+\begin{DoxyCompactList}\small\item\em Draws a ball on the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_a6136e29fbf92e275dc0f1000f550adc4}{get\+Score\+Image}} (int score)
+\begin{DoxyCompactList}\small\item\em Auxiliar to get the image of the score. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_a8690cdc2f16db4e1e85454c7bf4d3375}{get\+Number\+Image}} (int number)
+\item 
+void() \mbox{\hyperlink{viewer_8c_a2ec754b1d0db25cd334c6c2da3ee6954}{draw\+\_\+scores}} ()
+\begin{DoxyCompactList}\small\item\em Draws the scores on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_ac15d63a0b643d163c8843988fd299fec}{draw\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Draws the time on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a7e16b9d0a30c3711187f7d710dbf507d}{draw\+\_\+blocked}} ()
+\begin{DoxyCompactList}\small\item\em Draws the \char`\"{}blocked\char`\"{} menu on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_ae5c796a8b5a9ad109bec175e7ba17b21}{draw\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game over menu on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8c_a339183e6cac2eed6ab617075776050a3}{draw\+\_\+game\+\_\+win}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game win menu on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}} \mbox{\hyperlink{viewer_8c_a9d8d873964fd143f113fce55e15c37fb}{cursor}}
+\item 
+struct \mbox{\hyperlink{struct_arena}{Arena}} \mbox{\hyperlink{viewer_8c_a6d37abbeca8412cfc300df9ae931905d}{arena}}
+\item 
+\mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}} \mbox{\hyperlink{viewer_8c_aed766d1a38b70be51df494da921471fa}{game\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{viewer_8c_a73090bb6f3fb51137a791fee01794a36}{player}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{viewer_8c_abf54e2844a0903331c1a36028f86f821}{player2}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{viewer_8c_a220774e5dffbb87adcc40884e1fb8260}{AIplayer}}
+\item 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} \mbox{\hyperlink{viewer_8c_a2bf886de29b41ce845aff9fbfac6807f}{rt\+\_\+info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{viewer_8c_aa893dae372893c0c5e18d64bef95c4fd}\label{viewer_8c_aa893dae372893c0c5e18d64bef95c4fd}} 
+\index{viewer.c@{viewer.c}!draw\_arena@{draw\_arena}}
+\index{draw\_arena@{draw\_arena}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_arena()}{draw\_arena()}}
+{\footnotesize\ttfamily void() draw\+\_\+arena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm arena image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{viewer_8c_aa893dae372893c0c5e18d64bef95c4fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_ace4a787485fde7f2051d0e29557f0ded}\label{viewer_8c_ace4a787485fde7f2051d0e29557f0ded}} 
+\index{viewer.c@{viewer.c}!draw\_arena\_multiplayer@{draw\_arena\_multiplayer}}
+\index{draw\_arena\_multiplayer@{draw\_arena\_multiplayer}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_arena\_multiplayer()}{draw\_arena\_multiplayer()}}
+{\footnotesize\ttfamily void() draw\+\_\+arena\+\_\+multiplayer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm arena image on the screen for multiplayer mode. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_ace4a787485fde7f2051d0e29557f0ded_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a495eeaaf495298ec57be90643ed070ff}\label{viewer_8c_a495eeaaf495298ec57be90643ed070ff}} 
+\index{viewer.c@{viewer.c}!draw\_background@{draw\_background}}
+\index{draw\_background@{draw\_background}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_background()}{draw\_background()}}
+{\footnotesize\ttfamily void() draw\+\_\+background (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a background on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a495eeaaf495298ec57be90643ed070ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a1b4d3b8e3ca33e20507f358be08f4645}\label{viewer_8c_a1b4d3b8e3ca33e20507f358be08f4645}} 
+\index{viewer.c@{viewer.c}!draw\_ball@{draw\_ball}}
+\index{draw\_ball@{draw\_ball}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_ball()}{draw\_ball()}}
+{\footnotesize\ttfamily void() draw\+\_\+ball (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ball}{Ball}} $\ast$}]{ball }\end{DoxyParamCaption})}
+
+
+
+Draws a ball on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{viewer_8c_a1b4d3b8e3ca33e20507f358be08f4645_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a7e16b9d0a30c3711187f7d710dbf507d}\label{viewer_8c_a7e16b9d0a30c3711187f7d710dbf507d}} 
+\index{viewer.c@{viewer.c}!draw\_blocked@{draw\_blocked}}
+\index{draw\_blocked@{draw\_blocked}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_blocked()}{draw\_blocked()}}
+{\footnotesize\ttfamily void() draw\+\_\+blocked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \char`\"{}blocked\char`\"{} menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{viewer_8c_a7e16b9d0a30c3711187f7d710dbf507d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a76989dacbf445d8b567e056ab1ee26a1}\label{viewer_8c_a76989dacbf445d8b567e056ab1ee26a1}} 
+\index{viewer.c@{viewer.c}!draw\_credits@{draw\_credits}}
+\index{draw\_credits@{draw\_credits}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_credits()}{draw\_credits()}}
+{\footnotesize\ttfamily void() draw\+\_\+credits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm \char`\"{}credits/instructions\char`\"{} menu image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{viewer_8c_a76989dacbf445d8b567e056ab1ee26a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_ae5c796a8b5a9ad109bec175e7ba17b21}\label{viewer_8c_ae5c796a8b5a9ad109bec175e7ba17b21}} 
+\index{viewer.c@{viewer.c}!draw\_game\_over@{draw\_game\_over}}
+\index{draw\_game\_over@{draw\_game\_over}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_over()}{draw\_game\_over()}}
+{\footnotesize\ttfamily void() draw\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game over menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_ae5c796a8b5a9ad109bec175e7ba17b21_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a339183e6cac2eed6ab617075776050a3}\label{viewer_8c_a339183e6cac2eed6ab617075776050a3}} 
+\index{viewer.c@{viewer.c}!draw\_game\_win@{draw\_game\_win}}
+\index{draw\_game\_win@{draw\_game\_win}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_win()}{draw\_game\_win()}}
+{\footnotesize\ttfamily void() draw\+\_\+game\+\_\+win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game win menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a339183e6cac2eed6ab617075776050a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a8b436345808e86cfdb278061a65a0fe7}\label{viewer_8c_a8b436345808e86cfdb278061a65a0fe7}} 
+\index{viewer.c@{viewer.c}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily void() draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm menu image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a8b436345808e86cfdb278061a65a0fe7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a7312ae0798b69b9b882f214132f3125c}\label{viewer_8c_a7312ae0798b69b9b882f214132f3125c}} 
+\index{viewer.c@{viewer.c}!draw\_mouse@{draw\_mouse}}
+\index{draw\_mouse@{draw\_mouse}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_mouse()}{draw\_mouse()}}
+{\footnotesize\ttfamily void() draw\+\_\+mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm mouse image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{viewer_8c_a7312ae0798b69b9b882f214132f3125c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a5029981aa4e2800c1a4214bdb3b433e6}\label{viewer_8c_a5029981aa4e2800c1a4214bdb3b433e6}} 
+\index{viewer.c@{viewer.c}!draw\_player@{draw\_player}}
+\index{draw\_player@{draw\_player}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_player()}{draw\_player()}}
+{\footnotesize\ttfamily void() draw\+\_\+player (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Draws a player on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{viewer_8c_a5029981aa4e2800c1a4214bdb3b433e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a2ec754b1d0db25cd334c6c2da3ee6954}\label{viewer_8c_a2ec754b1d0db25cd334c6c2da3ee6954}} 
+\index{viewer.c@{viewer.c}!draw\_scores@{draw\_scores}}
+\index{draw\_scores@{draw\_scores}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_scores()}{draw\_scores()}}
+{\footnotesize\ttfamily void() draw\+\_\+scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the scores on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a2ec754b1d0db25cd334c6c2da3ee6954_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_ac15d63a0b643d163c8843988fd299fec}\label{viewer_8c_ac15d63a0b643d163c8843988fd299fec}} 
+\index{viewer.c@{viewer.c}!draw\_time@{draw\_time}}
+\index{draw\_time@{draw\_time}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_time()}{draw\_time()}}
+{\footnotesize\ttfamily void() draw\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the time on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_ac15d63a0b643d163c8843988fd299fec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a8690cdc2f16db4e1e85454c7bf4d3375}\label{viewer_8c_a8690cdc2f16db4e1e85454c7bf4d3375}} 
+\index{viewer.c@{viewer.c}!getNumberImage@{getNumberImage}}
+\index{getNumberImage@{getNumberImage}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{getNumberImage()}{getNumberImage()}}
+{\footnotesize\ttfamily int() get\+Number\+Image (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{viewer_8c_a6136e29fbf92e275dc0f1000f550adc4}\label{viewer_8c_a6136e29fbf92e275dc0f1000f550adc4}} 
+\index{viewer.c@{viewer.c}!getScoreImage@{getScoreImage}}
+\index{getScoreImage@{getScoreImage}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{getScoreImage()}{getScoreImage()}}
+{\footnotesize\ttfamily int() get\+Score\+Image (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Auxiliar to get the image of the score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & the score image index to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{viewer_8c_a220774e5dffbb87adcc40884e1fb8260}\label{viewer_8c_a220774e5dffbb87adcc40884e1fb8260}} 
+\index{viewer.c@{viewer.c}!AIplayer@{AIplayer}}
+\index{AIplayer@{AIplayer}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{AIplayer}{AIplayer}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} AIplayer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_a6d37abbeca8412cfc300df9ae931905d}\label{viewer_8c_a6d37abbeca8412cfc300df9ae931905d}} 
+\index{viewer.c@{viewer.c}!arena@{arena}}
+\index{arena@{arena}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{arena}{arena}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_arena}{Arena}} arena\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_a9d8d873964fd143f113fce55e15c37fb}\label{viewer_8c_a9d8d873964fd143f113fce55e15c37fb}} 
+\index{viewer.c@{viewer.c}!cursor@{cursor}}
+\index{cursor@{cursor}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_cursor}{Cursor}} cursor\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_aed766d1a38b70be51df494da921471fa}\label{viewer_8c_aed766d1a38b70be51df494da921471fa}} 
+\index{viewer.c@{viewer.c}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{game\_state}{game\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}} game\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_a73090bb6f3fb51137a791fee01794a36}\label{viewer_8c_a73090bb6f3fb51137a791fee01794a36}} 
+\index{viewer.c@{viewer.c}!player@{player}}
+\index{player@{player}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} player\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_abf54e2844a0903331c1a36028f86f821}\label{viewer_8c_abf54e2844a0903331c1a36028f86f821}} 
+\index{viewer.c@{viewer.c}!player2@{player2}}
+\index{player2@{player2}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{player2}{player2}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} player2\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{viewer_8c_a2bf886de29b41ce845aff9fbfac6807f}\label{viewer_8c_a2bf886de29b41ce845aff9fbfac6807f}} 
+\index{viewer.c@{viewer.c}!rt\_info@{rt\_info}}
+\index{rt\_info@{rt\_info}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{rt\_info}{rt\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} rt\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+

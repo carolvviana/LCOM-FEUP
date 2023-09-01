@@ -1,0 +1,491 @@
+\hypertarget{model_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/mvc/model.h File Reference}
+\label{model_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/model.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/model.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms.\+h\char`\"{}}\newline
+Include dependency graph for model.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}}
+\begin{DoxyCompactList}\small\item\em Struct that represents the mouse pointer, and its position. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_player}{Player}}
+\begin{DoxyCompactList}\small\item\em Struct for the player and all its attributes. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_ball}{Ball}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a ball, and all its attributes. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_arena}{Arena}}
+\begin{DoxyCompactList}\small\item\em Struct that represents the arena, and all its attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{Collision\+Type}} \{ \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44a7ffb7e08daf9385fa15411b66b3694c9}{No\+Collision}}
+, \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44ad0ce191840982cc00aaeefe176b0fb4e}{Side\+Collision}}
+, \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44aa26284f42681dc42e4f3386e221b47d8}{Top\+Bottom\+Collision}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that represents the type of collision that happened. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}} \{ \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa77d1b58e26a2a3d61ce38e09764cbc19}{PLAYER1}}
+, \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa32a327d66c65387bb124f6c9408ff90b}{PLAYER2}}
+, \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa543a4628f164012f3408599a628c66dd}{NO\+\_\+\+WINNER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that represents the winner of the match. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{model_8h_a95e92f89ff50bb6e23adad06f85bf5b0}{up\+Menu\+Option}} ()
+\begin{DoxyCompactList}\small\item\em When in the menu, it changes the selected option to the option above the currently selected one. When the current selected option is the top one, it goes to the last one in the menu. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a03ac2686f02afaf5aff513f60ba8047f}{down\+Menu\+Option}} ()
+\begin{DoxyCompactList}\small\item\em When in the menu, it changes the selected option to the option below the currently selected one. When the current selected option is the last one, it goes to the first one in the menu. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{model_8h_a0a0c049e5159624b3f024ac0ff0ba35c}{get\+Menu\+Option}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current entry in the menu. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a98a89e1653d201c3b8089ef461ed612c}{set\+Menu\+Option}} (int option)
+\begin{DoxyCompactList}\small\item\em checks and sets the menu option \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_ad2535f105d57912f0b1b2c5ab6ef03d4}{reset\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Resets the positions of the players and the ball to their initial positions in the arena. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_adca5c0e0a541bc88f8cada3b8f1fc237}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets positions and determines initial velocity of the ball. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_afe55e58ebbd50b7aa93ca36dd2d3cc0e}{reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Resets the game, i.\+e. resets the positions of the players and the ball to their initial positions and resets the score of the players. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a6a9bb453b65dbb2c900ed07be1d20080}{move\+Player\+Up}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Moves the player up, if possible. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_aa4221ebebfd16ed05adc048c3f114cc3}{move\+Player\+Down}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Moves the player down, if possible. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a03a1e6c4110c41da56bf607ac64802ac}{move\+Player\+Right}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Moves the player right, if possible. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_aa8cb8346764b9088a86f6851c8344cbc}{move\+Player\+Left}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Moves the player left, if possible. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_ad5ee75852c746eae882640b7ce153b22}{activate\+Powerup1}} ()
+\begin{DoxyCompactList}\small\item\em Activates powerup 1 (horizontal movement) \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a6cc677023b794fba8dd33568ae4a6a95}{activate\+Powerup2}} ()
+\begin{DoxyCompactList}\small\item\em Activates powerup 2 (bigger player) \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a52de0aa82cf3bdff1c4a6a803bd29f6c}{reset\+Powerup}} ()
+\begin{DoxyCompactList}\small\item\em Resets the powerup to its default state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_ae5a47fae3a1ea0274a1cee0492a3d17f}{move\+AI}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Moves the AI player based on the position of the ball. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{Collision\+Type}}() \mbox{\hyperlink{model_8h_ac07055d4bad5e153b875d19461cd0026}{check\+Ball\+Collision}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Checks if the ball is colliding with the player, and if so, returns the type of collision. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{model_8h_a888f87088027abf44920c0b80e7e91b5}{move\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em Moves the ball in the correct direction depending if there was a collision or not. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{model_8h_a0725ea9572d0cf8d99acb25a69a1427b}{is\+Goal}} ()
+\begin{DoxyCompactList}\small\item\em verifies if there was a goal \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}}() \mbox{\hyperlink{model_8h_ab548fab14415b363ed15020abbcf4480}{check\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the score threshold was reached and returns the winner. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_af05d90a9cc660459855c903a579dd45f}{move\+Cursor}} (int dx, int dy)
+\begin{DoxyCompactList}\small\item\em Moves the cursor by dx and dy. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{model_8h_aabbae577c2720a545cfd084e1e0b9eda}{compress\+Data}} (int \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, int compressor)
+\begin{DoxyCompactList}\small\item\em Compresses data to send through serial port. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{model_8h_a65861515161a3ce23cdc350fec913d6b}{decompress\+Data}} (uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, int decompressor)
+\begin{DoxyCompactList}\small\item\em Decompresses the data. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_ac24360ee4d3ed4835f82c86d907c59dc}{switch\+Players}} ()
+\begin{DoxyCompactList}\small\item\em Switches the players. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_aff8e7c0319beb75ae9773863d54d8458}{switch\+Color\+Players}} ()
+\begin{DoxyCompactList}\small\item\em Switches the color of the players. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{model_8h_a987286308ffeb31267614bc23dcbde07}{switch\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em Switches the ball direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{model_8h_aa884075f403706dceea29a61771a0d44}\label{model_8h_aa884075f403706dceea29a61771a0d44}} 
+\index{model.h@{model.h}!CollisionType@{CollisionType}}
+\index{CollisionType@{CollisionType}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{CollisionType}{CollisionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{Collision\+Type}}}
+
+
+
+Enum that represents the type of collision that happened. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoCollision@{NoCollision}!model.h@{model.h}}\index{model.h@{model.h}!NoCollision@{NoCollision}}}\mbox{\Hypertarget{model_8h_aa884075f403706dceea29a61771a0d44a7ffb7e08daf9385fa15411b66b3694c9}\label{model_8h_aa884075f403706dceea29a61771a0d44a7ffb7e08daf9385fa15411b66b3694c9}} 
+No\+Collision&No collision happened. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SideCollision@{SideCollision}!model.h@{model.h}}\index{model.h@{model.h}!SideCollision@{SideCollision}}}\mbox{\Hypertarget{model_8h_aa884075f403706dceea29a61771a0d44ad0ce191840982cc00aaeefe176b0fb4e}\label{model_8h_aa884075f403706dceea29a61771a0d44ad0ce191840982cc00aaeefe176b0fb4e}} 
+Side\+Collision&Side collision happened. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TopBottomCollision@{TopBottomCollision}!model.h@{model.h}}\index{model.h@{model.h}!TopBottomCollision@{TopBottomCollision}}}\mbox{\Hypertarget{model_8h_aa884075f403706dceea29a61771a0d44aa26284f42681dc42e4f3386e221b47d8}\label{model_8h_aa884075f403706dceea29a61771a0d44aa26284f42681dc42e4f3386e221b47d8}} 
+Top\+Bottom\+Collision&Top or bottom collision happened. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}\label{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}} 
+\index{model.h@{model.h}!Winner@{Winner}}
+\index{Winner@{Winner}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{Winner}{Winner}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}}}
+
+
+
+Enum that represents the winner of the match. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER1@{PLAYER1}!model.h@{model.h}}\index{model.h@{model.h}!PLAYER1@{PLAYER1}}}\mbox{\Hypertarget{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa77d1b58e26a2a3d61ce38e09764cbc19}\label{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa77d1b58e26a2a3d61ce38e09764cbc19}} 
+PLAYER1&\mbox{\hyperlink{struct_player}{Player}} 1 won. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER2@{PLAYER2}!model.h@{model.h}}\index{model.h@{model.h}!PLAYER2@{PLAYER2}}}\mbox{\Hypertarget{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa32a327d66c65387bb124f6c9408ff90b}\label{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa32a327d66c65387bb124f6c9408ff90b}} 
+PLAYER2&\mbox{\hyperlink{struct_player}{Player}} 2 won. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_WINNER@{NO\_WINNER}!model.h@{model.h}}\index{model.h@{model.h}!NO\_WINNER@{NO\_WINNER}}}\mbox{\Hypertarget{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa543a4628f164012f3408599a628c66dd}\label{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa543a4628f164012f3408599a628c66dd}} 
+NO\+\_\+\+WINNER&No winner yet. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{model_8h_ad5ee75852c746eae882640b7ce153b22}\label{model_8h_ad5ee75852c746eae882640b7ce153b22}} 
+\index{model.h@{model.h}!activatePowerup1@{activatePowerup1}}
+\index{activatePowerup1@{activatePowerup1}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{activatePowerup1()}{activatePowerup1()}}
+{\footnotesize\ttfamily void() activate\+Powerup1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activates powerup 1 (horizontal movement) 
+
+\mbox{\Hypertarget{model_8h_a6cc677023b794fba8dd33568ae4a6a95}\label{model_8h_a6cc677023b794fba8dd33568ae4a6a95}} 
+\index{model.h@{model.h}!activatePowerup2@{activatePowerup2}}
+\index{activatePowerup2@{activatePowerup2}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{activatePowerup2()}{activatePowerup2()}}
+{\footnotesize\ttfamily void() activate\+Powerup2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activates powerup 2 (bigger player) 
+
+\mbox{\Hypertarget{model_8h_ac07055d4bad5e153b875d19461cd0026}\label{model_8h_ac07055d4bad5e153b875d19461cd0026}} 
+\index{model.h@{model.h}!checkBallCollision@{checkBallCollision}}
+\index{checkBallCollision@{checkBallCollision}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{checkBallCollision()}{checkBallCollision()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{Collision\+Type}}() check\+Ball\+Collision (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Checks if the ball is colliding with the player, and if so, returns the type of collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+enum Collision\+Type 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{model_8h_ac07055d4bad5e153b875d19461cd0026_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_ab548fab14415b363ed15020abbcf4480}\label{model_8h_ab548fab14415b363ed15020abbcf4480}} 
+\index{model.h@{model.h}!checkScore@{checkScore}}
+\index{checkScore@{checkScore}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{checkScore()}{checkScore()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}}() check\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the score threshold was reached and returns the winner. 
+
+\begin{DoxyReturn}{Returns}
+enum Winner 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_ab548fab14415b363ed15020abbcf4480_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_aabbae577c2720a545cfd084e1e0b9eda}\label{model_8h_aabbae577c2720a545cfd084e1e0b9eda}} 
+\index{model.h@{model.h}!compressData@{compressData}}
+\index{compressData@{compressData}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{compressData()}{compressData()}}
+{\footnotesize\ttfamily uint8\+\_\+t() compress\+Data (\begin{DoxyParamCaption}\item[{int}]{data,  }\item[{int}]{compressor }\end{DoxyParamCaption})}
+
+
+
+Compresses data to send through serial port. 
+
+\mbox{\Hypertarget{model_8h_a65861515161a3ce23cdc350fec913d6b}\label{model_8h_a65861515161a3ce23cdc350fec913d6b}} 
+\index{model.h@{model.h}!decompressData@{decompressData}}
+\index{decompressData@{decompressData}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{decompressData()}{decompressData()}}
+{\footnotesize\ttfamily uint8\+\_\+t() decompress\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data,  }\item[{int}]{decompressor }\end{DoxyParamCaption})}
+
+
+
+Decompresses the data. 
+
+\mbox{\Hypertarget{model_8h_a03ac2686f02afaf5aff513f60ba8047f}\label{model_8h_a03ac2686f02afaf5aff513f60ba8047f}} 
+\index{model.h@{model.h}!downMenuOption@{downMenuOption}}
+\index{downMenuOption@{downMenuOption}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{downMenuOption()}{downMenuOption()}}
+{\footnotesize\ttfamily void() down\+Menu\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+When in the menu, it changes the selected option to the option below the currently selected one. When the current selected option is the last one, it goes to the first one in the menu. 
+
+\mbox{\Hypertarget{model_8h_a0a0c049e5159624b3f024ac0ff0ba35c}\label{model_8h_a0a0c049e5159624b3f024ac0ff0ba35c}} 
+\index{model.h@{model.h}!getMenuOption@{getMenuOption}}
+\index{getMenuOption@{getMenuOption}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{getMenuOption()}{getMenuOption()}}
+{\footnotesize\ttfamily int() get\+Menu\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current entry in the menu. 
+
+\begin{DoxyReturn}{Returns}
+value of the current entry in the menu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{model_8h_a0725ea9572d0cf8d99acb25a69a1427b}\label{model_8h_a0725ea9572d0cf8d99acb25a69a1427b}} 
+\index{model.h@{model.h}!isGoal@{isGoal}}
+\index{isGoal@{isGoal}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{isGoal()}{isGoal()}}
+{\footnotesize\ttfamily bool() is\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+verifies if there was a goal 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{model_8h_ae5a47fae3a1ea0274a1cee0492a3d17f}\label{model_8h_ae5a47fae3a1ea0274a1cee0492a3d17f}} 
+\index{model.h@{model.h}!moveAI@{moveAI}}
+\index{moveAI@{moveAI}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{moveAI()}{moveAI()}}
+{\footnotesize\ttfamily void() move\+AI (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Moves the AI player based on the position of the ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{model_8h_a888f87088027abf44920c0b80e7e91b5}\label{model_8h_a888f87088027abf44920c0b80e7e91b5}} 
+\index{model.h@{model.h}!moveBall@{moveBall}}
+\index{moveBall@{moveBall}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{moveBall()}{moveBall()}}
+{\footnotesize\ttfamily bool() move\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the ball in the correct direction depending if there was a collision or not. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_a888f87088027abf44920c0b80e7e91b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_af05d90a9cc660459855c903a579dd45f}\label{model_8h_af05d90a9cc660459855c903a579dd45f}} 
+\index{model.h@{model.h}!moveCursor@{moveCursor}}
+\index{moveCursor@{moveCursor}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{moveCursor()}{moveCursor()}}
+{\footnotesize\ttfamily void() move\+Cursor (\begin{DoxyParamCaption}\item[{int}]{dx,  }\item[{int}]{dy }\end{DoxyParamCaption})}
+
+
+
+Moves the cursor by dx and dy. 
+
+\mbox{\Hypertarget{model_8h_aa4221ebebfd16ed05adc048c3f114cc3}\label{model_8h_aa4221ebebfd16ed05adc048c3f114cc3}} 
+\index{model.h@{model.h}!movePlayerDown@{movePlayerDown}}
+\index{movePlayerDown@{movePlayerDown}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{movePlayerDown()}{movePlayerDown()}}
+{\footnotesize\ttfamily void() move\+Player\+Down (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Moves the player down, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{struct_player}{Player}} to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{model_8h_aa8cb8346764b9088a86f6851c8344cbc}\label{model_8h_aa8cb8346764b9088a86f6851c8344cbc}} 
+\index{model.h@{model.h}!movePlayerLeft@{movePlayerLeft}}
+\index{movePlayerLeft@{movePlayerLeft}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{movePlayerLeft()}{movePlayerLeft()}}
+{\footnotesize\ttfamily void() move\+Player\+Left (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Moves the player left, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{struct_player}{Player}} to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{model_8h_a03a1e6c4110c41da56bf607ac64802ac}\label{model_8h_a03a1e6c4110c41da56bf607ac64802ac}} 
+\index{model.h@{model.h}!movePlayerRight@{movePlayerRight}}
+\index{movePlayerRight@{movePlayerRight}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{movePlayerRight()}{movePlayerRight()}}
+{\footnotesize\ttfamily void() move\+Player\+Right (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Moves the player right, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{struct_player}{Player}} to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{model_8h_a6a9bb453b65dbb2c900ed07be1d20080}\label{model_8h_a6a9bb453b65dbb2c900ed07be1d20080}} 
+\index{model.h@{model.h}!movePlayerUp@{movePlayerUp}}
+\index{movePlayerUp@{movePlayerUp}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{movePlayerUp()}{movePlayerUp()}}
+{\footnotesize\ttfamily void() move\+Player\+Up (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Moves the player up, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{struct_player}{Player}} to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{model_8h_adca5c0e0a541bc88f8cada3b8f1fc237}\label{model_8h_adca5c0e0a541bc88f8cada3b8f1fc237}} 
+\index{model.h@{model.h}!reset@{reset}}
+\index{reset@{reset}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void() reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets positions and determines initial velocity of the ball. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{model_8h_adca5c0e0a541bc88f8cada3b8f1fc237_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_afe55e58ebbd50b7aa93ca36dd2d3cc0e}\label{model_8h_afe55e58ebbd50b7aa93ca36dd2d3cc0e}} 
+\index{model.h@{model.h}!resetGame@{resetGame}}
+\index{resetGame@{resetGame}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{resetGame()}{resetGame()}}
+{\footnotesize\ttfamily void() reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the game, i.\+e. resets the positions of the players and the ball to their initial positions and resets the score of the players. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{model_8h_afe55e58ebbd50b7aa93ca36dd2d3cc0e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_ad2535f105d57912f0b1b2c5ab6ef03d4}\label{model_8h_ad2535f105d57912f0b1b2c5ab6ef03d4}} 
+\index{model.h@{model.h}!resetPositions@{resetPositions}}
+\index{resetPositions@{resetPositions}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{resetPositions()}{resetPositions()}}
+{\footnotesize\ttfamily void() reset\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the positions of the players and the ball to their initial positions in the arena. 
+
+\mbox{\Hypertarget{model_8h_a52de0aa82cf3bdff1c4a6a803bd29f6c}\label{model_8h_a52de0aa82cf3bdff1c4a6a803bd29f6c}} 
+\index{model.h@{model.h}!resetPowerup@{resetPowerup}}
+\index{resetPowerup@{resetPowerup}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{resetPowerup()}{resetPowerup()}}
+{\footnotesize\ttfamily void() reset\+Powerup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the powerup to its default state. 
+
+\mbox{\Hypertarget{model_8h_a98a89e1653d201c3b8089ef461ed612c}\label{model_8h_a98a89e1653d201c3b8089ef461ed612c}} 
+\index{model.h@{model.h}!setMenuOption@{setMenuOption}}
+\index{setMenuOption@{setMenuOption}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{setMenuOption()}{setMenuOption()}}
+{\footnotesize\ttfamily void() set\+Menu\+Option (\begin{DoxyParamCaption}\item[{int}]{option }\end{DoxyParamCaption})}
+
+
+
+checks and sets the menu option 
+
+\mbox{\Hypertarget{model_8h_a987286308ffeb31267614bc23dcbde07}\label{model_8h_a987286308ffeb31267614bc23dcbde07}} 
+\index{model.h@{model.h}!switchBall@{switchBall}}
+\index{switchBall@{switchBall}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{switchBall()}{switchBall()}}
+{\footnotesize\ttfamily void() switch\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Switches the ball direction. 
+
+\mbox{\Hypertarget{model_8h_aff8e7c0319beb75ae9773863d54d8458}\label{model_8h_aff8e7c0319beb75ae9773863d54d8458}} 
+\index{model.h@{model.h}!switchColorPlayers@{switchColorPlayers}}
+\index{switchColorPlayers@{switchColorPlayers}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{switchColorPlayers()}{switchColorPlayers()}}
+{\footnotesize\ttfamily void() switch\+Color\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Switches the color of the players. 
+
+\mbox{\Hypertarget{model_8h_ac24360ee4d3ed4835f82c86d907c59dc}\label{model_8h_ac24360ee4d3ed4835f82c86d907c59dc}} 
+\index{model.h@{model.h}!switchPlayers@{switchPlayers}}
+\index{switchPlayers@{switchPlayers}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{switchPlayers()}{switchPlayers()}}
+{\footnotesize\ttfamily void() switch\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Switches the players. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{model_8h_ac24360ee4d3ed4835f82c86d907c59dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_a95e92f89ff50bb6e23adad06f85bf5b0}\label{model_8h_a95e92f89ff50bb6e23adad06f85bf5b0}} 
+\index{model.h@{model.h}!upMenuOption@{upMenuOption}}
+\index{upMenuOption@{upMenuOption}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{upMenuOption()}{upMenuOption()}}
+{\footnotesize\ttfamily void() up\+Menu\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+When in the menu, it changes the selected option to the option above the currently selected one. When the current selected option is the top one, it goes to the last one in the menu. 
+

@@ -1,0 +1,423 @@
+\hypertarget{serialport_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/serialport/serialport.h File Reference}
+\label{serialport_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for serialport.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{serialport_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serialport_8h_a28ad4eb0f9f3f4c4fe1c1d2573aea242}{SERIALP\+\_\+\+ADDRESS}}~0x3\+F8
+\begin{DoxyCompactList}\small\item\em COM1 Address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_a05c9391235ea9366987d4cf4b8aab8dd}{SERIALP\+\_\+\+RECEIVER}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Enable the Received Data Available Interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_ae9bd896296cc22c723540e2ce235139b}{SERIALP\+\_\+\+STARTGAME}}~0x11
+\begin{DoxyCompactList}\small\item\em Message to connect. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_ad522ccd0c430ac7fe3b4cc9235567b71}{SERIALP\+\_\+\+PLAY}}~0x12
+\begin{DoxyCompactList}\small\item\em Message to start game. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_ab7c360d2fbc815518ab4ee6e0a7ba86a}{SERIALP\+\_\+\+RECEIVING\+\_\+\+DATA}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Set in the status when there is data for receiving. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_ac03ede8afb2a33bfa277a7f946c5c129}{SERIALP\+\_\+\+IER\+\_\+\+OFFSET}}~1
+\begin{DoxyCompactList}\small\item\em Interrupt Enable Register Offset regarding the COM1 address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_accd78d8efea399215779567336dcd3ae}{SERIALP\+\_\+\+LSR\+\_\+\+OFFSET}}~5
+\begin{DoxyCompactList}\small\item\em Line Status Register Offset regarding the COM1 address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_a221af9d3fd6f1399678073b4bc966fa2}{SERIALP\+\_\+\+OVERRUN\+\_\+\+ERR}}~(1$<$$<$1)
+\begin{DoxyCompactList}\small\item\em Overrun Error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_a7bedcebb13c10c879f33f743f251fa19}{SERIALP\+\_\+\+PARITY\+\_\+\+ERR}}~(1$<$$<$2)
+\begin{DoxyCompactList}\small\item\em Parity Error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_a1a42327420eed16823f00ffed3d997b3}{SERIALP\+\_\+\+FRAME\+\_\+\+ERR}}~(1$<$$<$3)
+\begin{DoxyCompactList}\small\item\em Frame Error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_aa5dcb1080a3a72760e646f45b8ea083e}{SERIALP\+\_\+\+TRANSMITTERS}}~BIT(5) $\vert$ BIT(6)
+\begin{DoxyCompactList}\small\item\em THR and TSR are both empty. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialport_8h_ad8f54ce678dc207cc4e90c388161bd5e}{SERIALP\+\_\+\+IRQLINE}}~4
+\begin{DoxyCompactList}\small\item\em IRQLine of Serial\+Port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{serialport_8h_a903a77c54afa75ec3fa313d35471a4ce}{init\+\_\+serialp}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the serial port\+: Enables serialport interrupts and sets the serialport to the correct configuration (interrupt when there is data avilable). Reads all data that might be unread and signals it is ready to connect. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{serialport_8h_a4cb60b252d2c9db2d53985dd520d5848}{serialp\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Serial\+Port interrupt handler. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a0c6a9f33696579390bf06bf4eb054a05}{read\+\_\+data\+\_\+serialp}} ()
+\begin{DoxyCompactList}\small\item\em Reads data from the serial port\+: Checks status, sees if there is any data received, reads it and stores it in the variable data. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_af7a8ffc2d2a50c92c68480eac1e7b9c7}{read\+\_\+status\+\_\+serialp}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Reads the status of the serial port from Line Status Register and checks if there are no errors. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a0923a173e5234a5aac43789de70142e9}{send\+\_\+data\+\_\+serialp}} (uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}})
+\begin{DoxyCompactList}\small\item\em Sends data to the serial port\+: First checks status and sees if THR and TSR are empty, then sends the data. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a51d0da0e2cfd471644e3e0f1e649373d}{serialp\+\_\+connection}} (int $\ast$ready)
+\begin{DoxyCompactList}\small\item\em Estabilishes a first connection (and connects) between the two serial ports. Determines which player is which and sends the ready signal. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_acb5e2314ffab528191e83f9836ab0451}{serialp\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes the serial port interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_aef6b9501e2df0aca48c25239718191c7}{serialp\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the serial port interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a87809990a56dd0e34e58a544d13cc52c}{serialp\+\_\+get\+\_\+status}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Reads the status of the serial port from the LSR. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a31d0019cd699d7b50feb1781afccccfc}{serialp\+\_\+check\+\_\+error}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Checks if the parameter status does not have Parity, overrun or framing errors. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8h_a84789a9e59191b48170648424f170820}{write\+\_\+address\+\_\+with\+\_\+offset}} (int offset, uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}})
+\begin{DoxyCompactList}\small\item\em Writes the parameter data to a certain address (address of COM1 + offset) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{serialport_8h_a28ad4eb0f9f3f4c4fe1c1d2573aea242}\label{serialport_8h_a28ad4eb0f9f3f4c4fe1c1d2573aea242}} 
+\index{serialport.h@{serialport.h}!SERIALP\_ADDRESS@{SERIALP\_ADDRESS}}
+\index{SERIALP\_ADDRESS@{SERIALP\_ADDRESS}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_ADDRESS}{SERIALP\_ADDRESS}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+ADDRESS~0x3\+F8}
+
+
+
+COM1 Address. 
+
+\mbox{\Hypertarget{serialport_8h_a1a42327420eed16823f00ffed3d997b3}\label{serialport_8h_a1a42327420eed16823f00ffed3d997b3}} 
+\index{serialport.h@{serialport.h}!SERIALP\_FRAME\_ERR@{SERIALP\_FRAME\_ERR}}
+\index{SERIALP\_FRAME\_ERR@{SERIALP\_FRAME\_ERR}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_FRAME\_ERR}{SERIALP\_FRAME\_ERR}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+FRAME\+\_\+\+ERR~(1$<$$<$3)}
+
+
+
+Frame Error. 
+
+\mbox{\Hypertarget{serialport_8h_ac03ede8afb2a33bfa277a7f946c5c129}\label{serialport_8h_ac03ede8afb2a33bfa277a7f946c5c129}} 
+\index{serialport.h@{serialport.h}!SERIALP\_IER\_OFFSET@{SERIALP\_IER\_OFFSET}}
+\index{SERIALP\_IER\_OFFSET@{SERIALP\_IER\_OFFSET}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_IER\_OFFSET}{SERIALP\_IER\_OFFSET}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+IER\+\_\+\+OFFSET~1}
+
+
+
+Interrupt Enable Register Offset regarding the COM1 address. 
+
+\mbox{\Hypertarget{serialport_8h_ad8f54ce678dc207cc4e90c388161bd5e}\label{serialport_8h_ad8f54ce678dc207cc4e90c388161bd5e}} 
+\index{serialport.h@{serialport.h}!SERIALP\_IRQLINE@{SERIALP\_IRQLINE}}
+\index{SERIALP\_IRQLINE@{SERIALP\_IRQLINE}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_IRQLINE}{SERIALP\_IRQLINE}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+IRQLINE~4}
+
+
+
+IRQLine of Serial\+Port. 
+
+\mbox{\Hypertarget{serialport_8h_accd78d8efea399215779567336dcd3ae}\label{serialport_8h_accd78d8efea399215779567336dcd3ae}} 
+\index{serialport.h@{serialport.h}!SERIALP\_LSR\_OFFSET@{SERIALP\_LSR\_OFFSET}}
+\index{SERIALP\_LSR\_OFFSET@{SERIALP\_LSR\_OFFSET}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_LSR\_OFFSET}{SERIALP\_LSR\_OFFSET}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+LSR\+\_\+\+OFFSET~5}
+
+
+
+Line Status Register Offset regarding the COM1 address. 
+
+\mbox{\Hypertarget{serialport_8h_a221af9d3fd6f1399678073b4bc966fa2}\label{serialport_8h_a221af9d3fd6f1399678073b4bc966fa2}} 
+\index{serialport.h@{serialport.h}!SERIALP\_OVERRUN\_ERR@{SERIALP\_OVERRUN\_ERR}}
+\index{SERIALP\_OVERRUN\_ERR@{SERIALP\_OVERRUN\_ERR}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_OVERRUN\_ERR}{SERIALP\_OVERRUN\_ERR}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+OVERRUN\+\_\+\+ERR~(1$<$$<$1)}
+
+
+
+Overrun Error. 
+
+\mbox{\Hypertarget{serialport_8h_a7bedcebb13c10c879f33f743f251fa19}\label{serialport_8h_a7bedcebb13c10c879f33f743f251fa19}} 
+\index{serialport.h@{serialport.h}!SERIALP\_PARITY\_ERR@{SERIALP\_PARITY\_ERR}}
+\index{SERIALP\_PARITY\_ERR@{SERIALP\_PARITY\_ERR}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_PARITY\_ERR}{SERIALP\_PARITY\_ERR}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+PARITY\+\_\+\+ERR~(1$<$$<$2)}
+
+
+
+Parity Error. 
+
+\mbox{\Hypertarget{serialport_8h_ad522ccd0c430ac7fe3b4cc9235567b71}\label{serialport_8h_ad522ccd0c430ac7fe3b4cc9235567b71}} 
+\index{serialport.h@{serialport.h}!SERIALP\_PLAY@{SERIALP\_PLAY}}
+\index{SERIALP\_PLAY@{SERIALP\_PLAY}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_PLAY}{SERIALP\_PLAY}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+PLAY~0x12}
+
+
+
+Message to start game. 
+
+\mbox{\Hypertarget{serialport_8h_a05c9391235ea9366987d4cf4b8aab8dd}\label{serialport_8h_a05c9391235ea9366987d4cf4b8aab8dd}} 
+\index{serialport.h@{serialport.h}!SERIALP\_RECEIVER@{SERIALP\_RECEIVER}}
+\index{SERIALP\_RECEIVER@{SERIALP\_RECEIVER}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_RECEIVER}{SERIALP\_RECEIVER}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+RECEIVER~BIT(0)}
+
+
+
+Enable the Received Data Available Interrupt. 
+
+\mbox{\Hypertarget{serialport_8h_ab7c360d2fbc815518ab4ee6e0a7ba86a}\label{serialport_8h_ab7c360d2fbc815518ab4ee6e0a7ba86a}} 
+\index{serialport.h@{serialport.h}!SERIALP\_RECEIVING\_DATA@{SERIALP\_RECEIVING\_DATA}}
+\index{SERIALP\_RECEIVING\_DATA@{SERIALP\_RECEIVING\_DATA}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_RECEIVING\_DATA}{SERIALP\_RECEIVING\_DATA}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+RECEIVING\+\_\+\+DATA~BIT(0)}
+
+
+
+Set in the status when there is data for receiving. 
+
+\mbox{\Hypertarget{serialport_8h_ae9bd896296cc22c723540e2ce235139b}\label{serialport_8h_ae9bd896296cc22c723540e2ce235139b}} 
+\index{serialport.h@{serialport.h}!SERIALP\_STARTGAME@{SERIALP\_STARTGAME}}
+\index{SERIALP\_STARTGAME@{SERIALP\_STARTGAME}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_STARTGAME}{SERIALP\_STARTGAME}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+STARTGAME~0x11}
+
+
+
+Message to connect. 
+
+\mbox{\Hypertarget{serialport_8h_aa5dcb1080a3a72760e646f45b8ea083e}\label{serialport_8h_aa5dcb1080a3a72760e646f45b8ea083e}} 
+\index{serialport.h@{serialport.h}!SERIALP\_TRANSMITTERS@{SERIALP\_TRANSMITTERS}}
+\index{SERIALP\_TRANSMITTERS@{SERIALP\_TRANSMITTERS}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{SERIALP\_TRANSMITTERS}{SERIALP\_TRANSMITTERS}}
+{\footnotesize\ttfamily \#define SERIALP\+\_\+\+TRANSMITTERS~BIT(5) $\vert$ BIT(6)}
+
+
+
+THR and TSR are both empty. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{serialport_8h_a903a77c54afa75ec3fa313d35471a4ce}\label{serialport_8h_a903a77c54afa75ec3fa313d35471a4ce}} 
+\index{serialport.h@{serialport.h}!init\_serialp@{init\_serialp}}
+\index{init\_serialp@{init\_serialp}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{init\_serialp()}{init\_serialp()}}
+{\footnotesize\ttfamily int() init\+\_\+serialp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the serial port\+: Enables serialport interrupts and sets the serialport to the correct configuration (interrupt when there is data avilable). Reads all data that might be unread and signals it is ready to connect. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_a903a77c54afa75ec3fa313d35471a4ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_a0c6a9f33696579390bf06bf4eb054a05}\label{serialport_8h_a0c6a9f33696579390bf06bf4eb054a05}} 
+\index{serialport.h@{serialport.h}!read\_data\_serialp@{read\_data\_serialp}}
+\index{read\_data\_serialp@{read\_data\_serialp}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{read\_data\_serialp()}{read\_data\_serialp()}}
+{\footnotesize\ttfamily int() read\+\_\+data\+\_\+serialp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads data from the serial port\+: Checks status, sees if there is any data received, reads it and stores it in the variable data. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_a0c6a9f33696579390bf06bf4eb054a05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_af7a8ffc2d2a50c92c68480eac1e7b9c7}\label{serialport_8h_af7a8ffc2d2a50c92c68480eac1e7b9c7}} 
+\index{serialport.h@{serialport.h}!read\_status\_serialp@{read\_status\_serialp}}
+\index{read\_status\_serialp@{read\_status\_serialp}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{read\_status\_serialp()}{read\_status\_serialp()}}
+{\footnotesize\ttfamily int() read\+\_\+status\+\_\+serialp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status of the serial port from Line Status Register and checks if there are no errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_af7a8ffc2d2a50c92c68480eac1e7b9c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_a0923a173e5234a5aac43789de70142e9}\label{serialport_8h_a0923a173e5234a5aac43789de70142e9}} 
+\index{serialport.h@{serialport.h}!send\_data\_serialp@{send\_data\_serialp}}
+\index{send\_data\_serialp@{send\_data\_serialp}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{send\_data\_serialp()}{send\_data\_serialp()}}
+{\footnotesize\ttfamily int() send\+\_\+data\+\_\+serialp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Sends data to the serial port\+: First checks status and sees if THR and TSR are empty, then sends the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_a0923a173e5234a5aac43789de70142e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_a31d0019cd699d7b50feb1781afccccfc}\label{serialport_8h_a31d0019cd699d7b50feb1781afccccfc}} 
+\index{serialport.h@{serialport.h}!serialp\_check\_error@{serialp\_check\_error}}
+\index{serialp\_check\_error@{serialp\_check\_error}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_check\_error()}{serialp\_check\_error()}}
+{\footnotesize\ttfamily int() serialp\+\_\+check\+\_\+error (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Checks if the parameter status does not have Parity, overrun or framing errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8h_a51d0da0e2cfd471644e3e0f1e649373d}\label{serialport_8h_a51d0da0e2cfd471644e3e0f1e649373d}} 
+\index{serialport.h@{serialport.h}!serialp\_connection@{serialp\_connection}}
+\index{serialp\_connection@{serialp\_connection}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_connection()}{serialp\_connection()}}
+{\footnotesize\ttfamily int() serialp\+\_\+connection (\begin{DoxyParamCaption}\item[{int $\ast$}]{ready }\end{DoxyParamCaption})}
+
+
+
+Estabilishes a first connection (and connects) between the two serial ports. Determines which player is which and sends the ready signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & \char`\"{}ready\char`\"{} to send ready-\/signal between serialports \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_a51d0da0e2cfd471644e3e0f1e649373d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_a87809990a56dd0e34e58a544d13cc52c}\label{serialport_8h_a87809990a56dd0e34e58a544d13cc52c}} 
+\index{serialport.h@{serialport.h}!serialp\_get\_status@{serialp\_get\_status}}
+\index{serialp\_get\_status@{serialp\_get\_status}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_get\_status()}{serialp\_get\_status()}}
+{\footnotesize\ttfamily int() serialp\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status of the serial port from the LSR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{serialport_8h_a87809990a56dd0e34e58a544d13cc52c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_a4cb60b252d2c9db2d53985dd520d5848}\label{serialport_8h_a4cb60b252d2c9db2d53985dd520d5848}} 
+\index{serialport.h@{serialport.h}!serialp\_ih@{serialp\_ih}}
+\index{serialp\_ih@{serialp\_ih}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_ih()}{serialp\_ih()}}
+{\footnotesize\ttfamily void() serialp\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Serial\+Port interrupt handler. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8h_a4cb60b252d2c9db2d53985dd520d5848_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8h_acb5e2314ffab528191e83f9836ab0451}\label{serialport_8h_acb5e2314ffab528191e83f9836ab0451}} 
+\index{serialport.h@{serialport.h}!serialp\_subscribe\_int@{serialp\_subscribe\_int}}
+\index{serialp\_subscribe\_int@{serialp\_subscribe\_int}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_subscribe\_int()}{serialp\_subscribe\_int()}}
+{\footnotesize\ttfamily int() serialp\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes the serial port interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & pointer to the hook\+\_\+id\+\_\+serialp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8h_aef6b9501e2df0aca48c25239718191c7}\label{serialport_8h_aef6b9501e2df0aca48c25239718191c7}} 
+\index{serialport.h@{serialport.h}!serialp\_unsubscribe\_int@{serialp\_unsubscribe\_int}}
+\index{serialp\_unsubscribe\_int@{serialp\_unsubscribe\_int}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{serialp\_unsubscribe\_int()}{serialp\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() serialp\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the serial port interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8h_a84789a9e59191b48170648424f170820}\label{serialport_8h_a84789a9e59191b48170648424f170820}} 
+\index{serialport.h@{serialport.h}!write\_address\_with\_offset@{write\_address\_with\_offset}}
+\index{write\_address\_with\_offset@{write\_address\_with\_offset}!serialport.h@{serialport.h}}
+\doxysubsubsection{\texorpdfstring{write\_address\_with\_offset()}{write\_address\_with\_offset()}}
+{\footnotesize\ttfamily int() write\+\_\+address\+\_\+with\+\_\+offset (\begin{DoxyParamCaption}\item[{int}]{offset,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes the parameter data to a certain address (address of COM1 + offset) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & of the address relative to the COM1 address \\
+\hline
+{\em data} & to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}

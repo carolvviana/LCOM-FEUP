@@ -1,0 +1,38 @@
+<map id="proj_main_loop" name="proj_main_loop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,563,114,589"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a8ed5dfce821ab680874fce9f7e6f07fb" title="Builds a frame buffer for video memory." alt="" coords="181,5,306,32"/>
+<area shape="rect" id="node3" href="$viewer_8c.html#a8b436345808e86cfdb278061a65a0fe7" title="Draws a xpm menu image on the screen." alt="" coords="200,56,287,83"/>
+<area shape="rect" id="node7" href="$kbd_8c.html#aea970a154161a35f6894898a092ed70a" title="Reads the scancode from the output buffer." alt="" coords="214,107,273,133"/>
+<area shape="rect" id="node10" href="$kbd_8c.html#a1cd38040f41a566c4405b2edcce32389" title="Subscribes and enables keyboard interrupts." alt="" coords="180,157,307,184"/>
+<area shape="rect" id="node11" href="$kbd_8c.html#aee0a7b54ee426fade9c780418d110fe0" title="Unsubscribes keyboard interrupts." alt="" coords="173,208,314,235"/>
+<area shape="rect" id="node12" href="$xpms_8c.html#ac82e7d55ed069f5d0c396c20b97337e9" title="Loads the images." alt="" coords="201,259,286,285"/>
+<area shape="rect" id="node13" href="$mouse_8c.html#aabb0fc34ade37c0596dd032fc37f8638" title="Saves the mouse packet in a struct." alt="" coords="162,309,325,336"/>
+<area shape="rect" id="node14" href="$mouse_8c.html#a210374b50462acdedab00df64d5cea3c" title="Reads and stores the mouse packet." alt="" coords="205,360,282,387"/>
+<area shape="rect" id="node16" href="$mouse_8c.html#ab268c1a22ae38f5545d1e0daa9a5b258" title="Subscribes and enables Mouse interrupts." alt="" coords="171,411,316,437"/>
+<area shape="rect" id="node17" href="$mouse_8c.html#a3ecf823d80520009ae5e0d76ae40a3c3" title="Unsubscribes Mouse interrupts." alt="" coords="164,461,323,488"/>
+<area shape="rect" id="node18" href="$mouse_8c.html#a6e47b03ed89aa760792292a19d5c1c3d" title="Writes a command to the KBC." alt="" coords="196,512,291,539"/>
+<area shape="rect" id="node20" href="$rtc_8c.html#a0b9ae809cf571f61e54712a23c65348e" title="RTC&#39;s interrupt handler to update real time information on struct." alt="" coords="217,563,270,589"/>
+<area shape="rect" id="node21" href="$rtc_8c.html#a0e3f625df84fe91b6d348d24940445e8" title="Updates the real_time_info struct with the current time." alt="" coords="387,588,529,615"/>
+<area shape="rect" id="node23" href="$rtc_8c.html#a6bbe679f115cec90d36d50eb2aac1b89" title="Subscribing to RTC interrupts." alt="" coords="183,664,304,691"/>
+<area shape="rect" id="node24" href="$rtc_8c.html#a9d4850bb2a488644672d43287f160622" title="Unubscribing to RTC interrupts." alt="" coords="176,715,311,741"/>
+<area shape="rect" id="node25" href="$serialport_8c.html#a4cb60b252d2c9db2d53985dd520d5848" title="SerialPort interrupt handler." alt="" coords="205,765,282,792"/>
+<area shape="rect" id="node30" href="$serialport_8c.html#acb5e2314ffab528191e83f9836ab0451" title="Subscribes the serial port interrupts." alt="" coords="172,816,315,843"/>
+<area shape="rect" id="node31" href="$serialport_8c.html#aef6b9501e2df0aca48c25239718191c7" title="Unsubscribes the serial port interrupts." alt="" coords="165,867,322,893"/>
+<area shape="rect" id="node32" href="$gpu_8c.html#a29e12d989ec405e661e02556aa1a12d9" title="Sets a given graphic mode." alt="" coords="176,917,311,944"/>
+<area shape="rect" id="node33" href="$gpu_8c.html#ae1a99ee23f3b94cac3562bc674209ec3" title="Passes the new buffer contents to the main buffer." alt="" coords="199,968,288,995"/>
+<area shape="rect" id="node34" href="$timer_8c.html#a91a2072306c68353712a6b771287dc2c" title="Timer 0 interrupt handler Used to increment counter." alt="" coords="183,1019,304,1045"/>
+<area shape="rect" id="node35" href="$timer_8c.html#ac57a7e1140a7e00ad95ac5488d2a671b" title="Subscribes and enables Timer 0 interrupts." alt="" coords="176,1069,311,1096"/>
+<area shape="rect" id="node36" href="$timer_8c.html#afabd21de449be154dd65d5fdb2d8045d" title="Unsubscribes Timer 0 interrupts." alt="" coords="169,1120,318,1147"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9" title="Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the ..." alt="" coords="418,31,498,57"/>
+<area shape="rect" id="node6" href="$model_8c.html#a0a0c049e5159624b3f024ac0ff0ba35c" title="Returns the current entry in the menu." alt="" coords="403,81,512,108"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="621,31,704,57"/>
+<area shape="rect" id="node8" href="$kbd_8c.html#afa20398065dbe981924bee1887ec38f1" title="Reads the output buffer of the KBC for keyboard information." alt="" coords="783,284,966,311"/>
+<area shape="rect" id="node9" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="1014,537,1104,564"/>
+<area shape="rect" id="node15" href="$mouse_8c.html#adf8110bd3c7f35c866859f247eb1484c" title="Tries to read the KBC output buffer and stores it in the variable output." alt="" coords="373,461,542,488"/>
+<area shape="rect" id="node19" href="$kbd_8c.html#af3cd440f42d85a42d18c24aff3f13729" title="Writes a command to the KBC." alt="" coords="605,512,720,539"/>
+<area shape="rect" id="node22" href="$rtc_8c.html#a741d66be00b18bb3f387a996cdf3bf90" title="Converts the number in BCD to binary." alt="" coords="590,613,735,640"/>
+<area shape="rect" id="node26" href="$serialport_8c.html#a0c6a9f33696579390bf06bf4eb054a05" title="Reads data from the serial port: Checks status, sees if there is any data received,..." alt="" coords="396,740,519,767"/>
+<area shape="rect" id="node27" href="$serialport_8c.html#af7a8ffc2d2a50c92c68480eac1e7b9c7" title="Reads the status of the serial port from Line Status Register and checks if there are no errors." alt="" coords="595,765,730,792"/>
+<area shape="rect" id="node28" href="$serialport_8c.html#af0b7fadf66deb5979674e1ff80e31129" title="Checks if the parameter status does not have Parity, overrun or framing errors." alt="" coords="807,715,942,741"/>
+<area shape="rect" id="node29" href="$serialport_8c.html#a837ae217c80e9748327e27e8cac6e1e4" title="Reads the status of the serial port from the LSR." alt="" coords="811,765,938,792"/>
+</map>

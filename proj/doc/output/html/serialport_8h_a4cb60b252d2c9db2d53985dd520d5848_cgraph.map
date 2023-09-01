@@ -1,0 +1,8 @@
+<map id="serialp_ih" name="serialp_ih">
+<area shape="rect" id="node1" title="SerialPort interrupt handler." alt="" coords="5,56,82,83"/>
+<area shape="rect" id="node2" href="$serialport_8c.html#a0c6a9f33696579390bf06bf4eb054a05" title="Reads data from the serial port: Checks status, sees if there is any data received,..." alt="" coords="130,56,253,83"/>
+<area shape="rect" id="node3" href="$serialport_8c.html#af7a8ffc2d2a50c92c68480eac1e7b9c7" title="Reads the status of the serial port from Line Status Register and checks if there are no errors." alt="" coords="301,56,435,83"/>
+<area shape="rect" id="node4" href="$serialport_8c.html#af0b7fadf66deb5979674e1ff80e31129" title="Checks if the parameter status does not have Parity, overrun or framing errors." alt="" coords="483,5,618,32"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="666,81,756,108"/>
+<area shape="rect" id="node5" href="$serialport_8c.html#a837ae217c80e9748327e27e8cac6e1e4" title="Reads the status of the serial port from the LSR." alt="" coords="487,56,614,83"/>
+</map>

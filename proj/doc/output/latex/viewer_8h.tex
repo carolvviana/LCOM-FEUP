@@ -1,0 +1,308 @@
+\hypertarget{viewer_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/mvc/viewer.h File Reference}
+\label{viewer_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/viewer.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/viewer.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gpu/gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../rtc/rtc.\+h\char`\"{}}\newline
+Include dependency graph for viewer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{viewer_8h_a8b436345808e86cfdb278061a65a0fe7}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm menu image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a7312ae0798b69b9b882f214132f3125c}{draw\+\_\+mouse}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm mouse image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_aa893dae372893c0c5e18d64bef95c4fd}{draw\+\_\+arena}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm arena image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_ace4a787485fde7f2051d0e29557f0ded}{draw\+\_\+arena\+\_\+multiplayer}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm arena image on the screen for multiplayer mode. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a76989dacbf445d8b567e056ab1ee26a1}{draw\+\_\+credits}} ()
+\begin{DoxyCompactList}\small\item\em Draws a xpm \char`\"{}credits/instructions\char`\"{} menu image on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a495eeaaf495298ec57be90643ed070ff}{draw\+\_\+background}} (uint32\+\_\+t $\ast$color)
+\begin{DoxyCompactList}\small\item\em Draws a background on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a5029981aa4e2800c1a4214bdb3b433e6}{draw\+\_\+player}} (struct \mbox{\hyperlink{struct_player}{Player}} $\ast$\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}})
+\begin{DoxyCompactList}\small\item\em Draws a player on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a1b4d3b8e3ca33e20507f358be08f4645}{draw\+\_\+ball}} (struct \mbox{\hyperlink{struct_ball}{Ball}} $\ast$\mbox{\hyperlink{controller_8c_aec7d031690b4f8260cedcca03ddc1854}{ball}})
+\begin{DoxyCompactList}\small\item\em Draws a ball on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a2ec754b1d0db25cd334c6c2da3ee6954}{draw\+\_\+scores}} ()
+\begin{DoxyCompactList}\small\item\em Draws the scores on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_ac15d63a0b643d163c8843988fd299fec}{draw\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Draws the time on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a7e16b9d0a30c3711187f7d710dbf507d}{draw\+\_\+blocked}} ()
+\begin{DoxyCompactList}\small\item\em Draws the \char`\"{}blocked\char`\"{} menu on the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8h_a1db1b7bcb0e1fb6f0eb2129b063bc272}{get\+\_\+number\+\_\+image}} (int number)
+\begin{DoxyCompactList}\small\item\em Auxiliar to get the image of the number. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8h_a6136e29fbf92e275dc0f1000f550adc4}{get\+Score\+Image}} (int score)
+\begin{DoxyCompactList}\small\item\em Auxiliar to get the image of the score. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_ae5c796a8b5a9ad109bec175e7ba17b21}{draw\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game over menu on the screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{viewer_8h_a339183e6cac2eed6ab617075776050a3}{draw\+\_\+game\+\_\+win}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game win menu on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{viewer_8h_aa893dae372893c0c5e18d64bef95c4fd}\label{viewer_8h_aa893dae372893c0c5e18d64bef95c4fd}} 
+\index{viewer.h@{viewer.h}!draw\_arena@{draw\_arena}}
+\index{draw\_arena@{draw\_arena}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_arena()}{draw\_arena()}}
+{\footnotesize\ttfamily void() draw\+\_\+arena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm arena image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{viewer_8h_aa893dae372893c0c5e18d64bef95c4fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_ace4a787485fde7f2051d0e29557f0ded}\label{viewer_8h_ace4a787485fde7f2051d0e29557f0ded}} 
+\index{viewer.h@{viewer.h}!draw\_arena\_multiplayer@{draw\_arena\_multiplayer}}
+\index{draw\_arena\_multiplayer@{draw\_arena\_multiplayer}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_arena\_multiplayer()}{draw\_arena\_multiplayer()}}
+{\footnotesize\ttfamily void() draw\+\_\+arena\+\_\+multiplayer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm arena image on the screen for multiplayer mode. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_ace4a787485fde7f2051d0e29557f0ded_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a495eeaaf495298ec57be90643ed070ff}\label{viewer_8h_a495eeaaf495298ec57be90643ed070ff}} 
+\index{viewer.h@{viewer.h}!draw\_background@{draw\_background}}
+\index{draw\_background@{draw\_background}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_background()}{draw\_background()}}
+{\footnotesize\ttfamily void() draw\+\_\+background (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a background on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_a495eeaaf495298ec57be90643ed070ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a1b4d3b8e3ca33e20507f358be08f4645}\label{viewer_8h_a1b4d3b8e3ca33e20507f358be08f4645}} 
+\index{viewer.h@{viewer.h}!draw\_ball@{draw\_ball}}
+\index{draw\_ball@{draw\_ball}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_ball()}{draw\_ball()}}
+{\footnotesize\ttfamily void() draw\+\_\+ball (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ball}{Ball}} $\ast$}]{ball }\end{DoxyParamCaption})}
+
+
+
+Draws a ball on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{viewer_8h_a1b4d3b8e3ca33e20507f358be08f4645_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a7e16b9d0a30c3711187f7d710dbf507d}\label{viewer_8h_a7e16b9d0a30c3711187f7d710dbf507d}} 
+\index{viewer.h@{viewer.h}!draw\_blocked@{draw\_blocked}}
+\index{draw\_blocked@{draw\_blocked}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_blocked()}{draw\_blocked()}}
+{\footnotesize\ttfamily void() draw\+\_\+blocked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \char`\"{}blocked\char`\"{} menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{viewer_8h_a7e16b9d0a30c3711187f7d710dbf507d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a76989dacbf445d8b567e056ab1ee26a1}\label{viewer_8h_a76989dacbf445d8b567e056ab1ee26a1}} 
+\index{viewer.h@{viewer.h}!draw\_credits@{draw\_credits}}
+\index{draw\_credits@{draw\_credits}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_credits()}{draw\_credits()}}
+{\footnotesize\ttfamily void() draw\+\_\+credits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm \char`\"{}credits/instructions\char`\"{} menu image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{viewer_8h_a76989dacbf445d8b567e056ab1ee26a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_ae5c796a8b5a9ad109bec175e7ba17b21}\label{viewer_8h_ae5c796a8b5a9ad109bec175e7ba17b21}} 
+\index{viewer.h@{viewer.h}!draw\_game\_over@{draw\_game\_over}}
+\index{draw\_game\_over@{draw\_game\_over}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_over()}{draw\_game\_over()}}
+{\footnotesize\ttfamily void() draw\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game over menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_ae5c796a8b5a9ad109bec175e7ba17b21_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a339183e6cac2eed6ab617075776050a3}\label{viewer_8h_a339183e6cac2eed6ab617075776050a3}} 
+\index{viewer.h@{viewer.h}!draw\_game\_win@{draw\_game\_win}}
+\index{draw\_game\_win@{draw\_game\_win}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_win()}{draw\_game\_win()}}
+{\footnotesize\ttfamily void() draw\+\_\+game\+\_\+win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game win menu on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_a339183e6cac2eed6ab617075776050a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a8b436345808e86cfdb278061a65a0fe7}\label{viewer_8h_a8b436345808e86cfdb278061a65a0fe7}} 
+\index{viewer.h@{viewer.h}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily void() draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm menu image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_a8b436345808e86cfdb278061a65a0fe7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a7312ae0798b69b9b882f214132f3125c}\label{viewer_8h_a7312ae0798b69b9b882f214132f3125c}} 
+\index{viewer.h@{viewer.h}!draw\_mouse@{draw\_mouse}}
+\index{draw\_mouse@{draw\_mouse}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_mouse()}{draw\_mouse()}}
+{\footnotesize\ttfamily void() draw\+\_\+mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a xpm mouse image on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{viewer_8h_a7312ae0798b69b9b882f214132f3125c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a5029981aa4e2800c1a4214bdb3b433e6}\label{viewer_8h_a5029981aa4e2800c1a4214bdb3b433e6}} 
+\index{viewer.h@{viewer.h}!draw\_player@{draw\_player}}
+\index{draw\_player@{draw\_player}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_player()}{draw\_player()}}
+{\footnotesize\ttfamily void() draw\+\_\+player (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Draws a player on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{viewer_8h_a5029981aa4e2800c1a4214bdb3b433e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a2ec754b1d0db25cd334c6c2da3ee6954}\label{viewer_8h_a2ec754b1d0db25cd334c6c2da3ee6954}} 
+\index{viewer.h@{viewer.h}!draw\_scores@{draw\_scores}}
+\index{draw\_scores@{draw\_scores}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_scores()}{draw\_scores()}}
+{\footnotesize\ttfamily void() draw\+\_\+scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the scores on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_a2ec754b1d0db25cd334c6c2da3ee6954_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_ac15d63a0b643d163c8843988fd299fec}\label{viewer_8h_ac15d63a0b643d163c8843988fd299fec}} 
+\index{viewer.h@{viewer.h}!draw\_time@{draw\_time}}
+\index{draw\_time@{draw\_time}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_time()}{draw\_time()}}
+{\footnotesize\ttfamily void() draw\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the time on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8h_ac15d63a0b643d163c8843988fd299fec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8h_a1db1b7bcb0e1fb6f0eb2129b063bc272}\label{viewer_8h_a1db1b7bcb0e1fb6f0eb2129b063bc272}} 
+\index{viewer.h@{viewer.h}!get\_number\_image@{get\_number\_image}}
+\index{get\_number\_image@{get\_number\_image}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{get\_number\_image()}{get\_number\_image()}}
+{\footnotesize\ttfamily int() get\+\_\+number\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Auxiliar to get the image of the number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of index to get the image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{viewer_8h_a6136e29fbf92e275dc0f1000f550adc4}\label{viewer_8h_a6136e29fbf92e275dc0f1000f550adc4}} 
+\index{viewer.h@{viewer.h}!getScoreImage@{getScoreImage}}
+\index{getScoreImage@{getScoreImage}!viewer.h@{viewer.h}}
+\doxysubsubsection{\texorpdfstring{getScoreImage()}{getScoreImage()}}
+{\footnotesize\ttfamily int() get\+Score\+Image (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Auxiliar to get the image of the score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & the score image index to be drawn \\
+\hline
+\end{DoxyParams}

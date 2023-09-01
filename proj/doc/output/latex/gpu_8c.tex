@@ -1,0 +1,189 @@
+\hypertarget{gpu_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/gpu/gpu.c File Reference}
+\label{gpu_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/gpu/gpu.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/gpu/gpu.c}}
+{\ttfamily \#include \char`\"{}gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for gpu.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{gpu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{gpu_8c_a29e12d989ec405e661e02556aa1a12d9}{set\+\_\+graphics\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Sets a given graphic mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{gpu_8c_a8ed5dfce821ab680874fce9f7e6f07fb}{build\+\_\+frame\+\_\+buffer}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Builds a frame buffer for video memory. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{gpu_8c_af7831592ef04114ca9b46e672c0e646b}{clear\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clears a secondary buffer. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{gpu_8c_ae1a99ee23f3b94cac3562bc674209ec3}{swap\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Passes the new buffer contents to the main buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{gpu_8c_aa75d96618132cccec2c977ae043d31fe}{draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a pixel in the given coordinates with the given color. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{gpu_8c_a98a97a5fd3cd26eb13cdcad7b2be6c05}{draw\+\_\+hor\+\_\+line}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{gpu_8c_a64d85a0174c3326d71ff220420c52ba8}{draw\+\_\+rect}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle with the given dimensions and color, starting in the given coordinates. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{gpu_8c_a06c7e1cc7a6048d69cd7edb9af014bf9}{draw\+\_\+xpm}} (xpm\+\_\+image\+\_\+t img, uint16\+\_\+t x, uint16\+\_\+t y, int flipped)
+\begin{DoxyCompactList}\small\item\em Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the specified coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpu_8c_a8ed5dfce821ab680874fce9f7e6f07fb}\label{gpu_8c_a8ed5dfce821ab680874fce9f7e6f07fb}} 
+\index{gpu.c@{gpu.c}!build\_frame\_buffer@{build\_frame\_buffer}}
+\index{build\_frame\_buffer@{build\_frame\_buffer}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{build\_frame\_buffer()}{build\_frame\_buffer()}}
+{\footnotesize\ttfamily int() build\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Builds a frame buffer for video memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Operation mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gpu_8c_af7831592ef04114ca9b46e672c0e646b}\label{gpu_8c_af7831592ef04114ca9b46e672c0e646b}} 
+\index{gpu.c@{gpu.c}!clear\_buffer@{clear\_buffer}}
+\index{clear\_buffer@{clear\_buffer}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{clear\_buffer()}{clear\_buffer()}}
+{\footnotesize\ttfamily void() clear\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears a secondary buffer. 
+
+\mbox{\Hypertarget{gpu_8c_a98a97a5fd3cd26eb13cdcad7b2be6c05}\label{gpu_8c_a98a97a5fd3cd26eb13cdcad7b2be6c05}} 
+\index{gpu.c@{gpu.c}!draw\_hor\_line@{draw\_hor\_line}}
+\index{draw\_hor\_line@{draw\_hor\_line}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_hor\_line()}{draw\_hor\_line()}}
+{\footnotesize\ttfamily int() draw\+\_\+hor\+\_\+line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{gpu_8c_a98a97a5fd3cd26eb13cdcad7b2be6c05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpu_8c_aa75d96618132cccec2c977ae043d31fe}\label{gpu_8c_aa75d96618132cccec2c977ae043d31fe}} 
+\index{gpu.c@{gpu.c}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int() draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a pixel in the given coordinates with the given color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate \\
+\hline
+{\em y} & Y coordinate \\
+\hline
+{\em color} & Color to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gpu_8c_a64d85a0174c3326d71ff220420c52ba8}\label{gpu_8c_a64d85a0174c3326d71ff220420c52ba8}} 
+\index{gpu.c@{gpu.c}!draw\_rect@{draw\_rect}}
+\index{draw\_rect@{draw\_rect}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_rect()}{draw\_rect()}}
+{\footnotesize\ttfamily int() draw\+\_\+rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle with the given dimensions and color, starting in the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate \\
+\hline
+{\em y} & Y coordinate \\
+\hline
+{\em width} & Width of the rectangle \\
+\hline
+{\em height} & Height of the rectangle \\
+\hline
+{\em color} & Color to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{gpu_8c_a64d85a0174c3326d71ff220420c52ba8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpu_8c_a06c7e1cc7a6048d69cd7edb9af014bf9}\label{gpu_8c_a06c7e1cc7a6048d69cd7edb9af014bf9}} 
+\index{gpu.c@{gpu.c}!draw\_xpm@{draw\_xpm}}
+\index{draw\_xpm@{draw\_xpm}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_xpm()}{draw\_xpm()}}
+{\footnotesize\ttfamily int() draw\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{xpm,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{int}]{flipped }\end{DoxyParamCaption})}
+
+
+
+Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & XPM image to draw. \\
+\hline
+{\em x} & X coordinate of the top-\/left corner of the image. \\
+\hline
+{\em y} & Y coordinate of the top-\/left corner of the image. \\
+\hline
+{\em flipped} & If set to 1, the image will be flipped horizontally.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or a non-\/zero value if an error occurred. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{gpu_8c_a06c7e1cc7a6048d69cd7edb9af014bf9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpu_8c_a29e12d989ec405e661e02556aa1a12d9}\label{gpu_8c_a29e12d989ec405e661e02556aa1a12d9}} 
+\index{gpu.c@{gpu.c}!set\_graphics\_mode@{set\_graphics\_mode}}
+\index{set\_graphics\_mode@{set\_graphics\_mode}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{set\_graphics\_mode()}{set\_graphics\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+graphics\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets a given graphic mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Operation mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gpu_8c_ae1a99ee23f3b94cac3562bc674209ec3}\label{gpu_8c_ae1a99ee23f3b94cac3562bc674209ec3}} 
+\index{gpu.c@{gpu.c}!swap\_buffer@{swap\_buffer}}
+\index{swap\_buffer@{swap\_buffer}!gpu.c@{gpu.c}}
+\doxysubsubsection{\texorpdfstring{swap\_buffer()}{swap\_buffer()}}
+{\footnotesize\ttfamily void() swap\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Passes the new buffer contents to the main buffer. 
+

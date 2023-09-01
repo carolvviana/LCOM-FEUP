@@ -1,0 +1,32 @@
+\hypertarget{mouse_8h_source}{}\doxysection{mouse.\+h}
+\label{mouse_8h_source}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_LCOM\_MOUSE\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_LCOM\_MOUSE\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <minix/sysutil.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 void (\mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\_ih}})();}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{19 int (\mbox{\hyperlink{mouse_8h_ab268c1a22ae38f5545d1e0daa9a5b258}{mouse\_subscribe\_int}})(uint8\_t *bit);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 int (\mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\_unsubscribe\_int}})();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{// void (mouse\_sync\_packet)();}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35 void (\mbox{\hyperlink{mouse_8h_aabb0fc34ade37c0596dd032fc37f8638}{mouse\_bytes\_to\_packet}})(\textcolor{keyword}{struct }packet *\mbox{\hyperlink{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{43 int (\mbox{\hyperlink{mouse_8h_a6e47b03ed89aa760792292a19d5c1c3d}{mouse\_write}})(uint8\_t cmd);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51 int (\mbox{\hyperlink{mouse_8h_adf8110bd3c7f35c866859f247eb1484c}{KBC\_read\_output\_mouse}})(uint8\_t port, uint8\_t* output);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{60 int (\mbox{\hyperlink{mouse_8h_af3cd440f42d85a42d18c24aff3f13729}{KBC\_write\_cmd}})(uint8\_t port, uint8\_t cmdByte);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+
+\end{DoxyCode}

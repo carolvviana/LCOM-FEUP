@@ -1,0 +1,43 @@
+\hypertarget{serialport_8h_source}{}\doxysection{serialport.\+h}
+\label{serialport_8h_source}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.h}}
+\mbox{\hyperlink{serialport_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define SERIALP\_ADDRESS 0x3F8 }}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define SERIALP\_RECEIVER BIT(0) }}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SERIALP\_STARTGAME 0x11 }}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define SERIALP\_PLAY 0x12 }}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define SERIALP\_RECEIVING\_DATA  BIT(0) }}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define SERIALP\_IER\_OFFSET 1 }}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define SERIALP\_LSR\_OFFSET  5  }}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SERIALP\_OVERRUN\_ERR (1<<1)  }}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SERIALP\_PARITY\_ERR (1<<2) }}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SERIALP\_FRAME\_ERR (1<<3) }}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define SERIALP\_TRANSMITTERS BIT(5) | BIT(6) }}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define SERIALP\_IRQLINE 4 }}
+\DoxyCodeLine{31 int (\mbox{\hyperlink{serialport_8h_a903a77c54afa75ec3fa313d35471a4ce}{init\_serialp}})();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{37 void(\mbox{\hyperlink{serialport_8h_a4cb60b252d2c9db2d53985dd520d5848}{serialp\_ih}})();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{44 int (\mbox{\hyperlink{serialport_8h_a0c6a9f33696579390bf06bf4eb054a05}{read\_data\_serialp}})();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{52 int (\mbox{\hyperlink{serialport_8h_af7a8ffc2d2a50c92c68480eac1e7b9c7}{read\_status\_serialp}})(uint8\_t* status);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{60 int (\mbox{\hyperlink{serialport_8h_a0923a173e5234a5aac43789de70142e9}{send\_data\_serialp}})(uint8\_t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{68 int (\mbox{\hyperlink{serialport_8h_a51d0da0e2cfd471644e3e0f1e649373d}{serialp\_connection}})(\textcolor{keywordtype}{int} *ready);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{76 int (\mbox{\hyperlink{serialport_8h_acb5e2314ffab528191e83f9836ab0451}{serialp\_subscribe\_int}})(uint8\_t *bit\_no);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83 int (\mbox{\hyperlink{serialport_8h_aef6b9501e2df0aca48c25239718191c7}{serialp\_unsubscribe\_int}})();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{91 int (\mbox{\hyperlink{serialport_8h_a87809990a56dd0e34e58a544d13cc52c}{serialp\_get\_status}})(uint8\_t* status);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{99 int (\mbox{\hyperlink{serialport_8h_a31d0019cd699d7b50feb1781afccccfc}{serialp\_check\_error}})(uint8\_t *status);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{108 int (\mbox{\hyperlink{serialport_8h_a84789a9e59191b48170648424f170820}{write\_address\_with\_offset}})(\textcolor{keywordtype}{int} offset, uint8\_t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}});}
+
+\end{DoxyCode}

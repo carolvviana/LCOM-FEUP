@@ -1,0 +1,5 @@
+<map id="reset" name="reset">
+<area shape="rect" id="node1" title="Resets positions and determines initial velocity of the ball." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$model_8c.html#ad2535f105d57912f0b1b2c5ab6ef03d4" title="Resets the positions of the players and the ball to their initial positions in the arena." alt="" coords="104,5,208,32"/>
+<area shape="rect" id="node3" href="$model_8c.html#a52de0aa82cf3bdff1c4a6a803bd29f6c" title="Resets the powerup to its default state." alt="" coords="106,56,206,83"/>
+</map>

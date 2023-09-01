@@ -1,0 +1,108 @@
+\hypertarget{model_8h_source}{}\doxysection{model.\+h}
+\label{model_8h_source}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/model.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/model.h}}
+\mbox{\hyperlink{model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{controller_8h}{controller.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{xpms_8h}{xpms.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{10 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cursor}{Cursor}}\{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_cursor_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_cursor_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{20 void (\mbox{\hyperlink{model_8h_a95e92f89ff50bb6e23adad06f85bf5b0}{upMenuOption}})();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{27 void (\mbox{\hyperlink{model_8h_a03ac2686f02afaf5aff513f60ba8047f}{downMenuOption}})();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34 int (\mbox{\hyperlink{model_8h_a0a0c049e5159624b3f024ac0ff0ba35c}{getMenuOption}})();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39 void (\mbox{\hyperlink{model_8h_a98a89e1653d201c3b8089ef461ed612c}{setMenuOption}})(\textcolor{keywordtype}{int} option);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}}\{}
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_af1617c91937fbd9d9d670940427d9b44}{x\_pos}};          }
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_a375120430014d7e06dcc37d9ca4fcdb8}{y\_pos}};          }
+\DoxyCodeLine{47     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_aeedc2afa1e522527db2235d0700a3b0d}{color}}; }
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_a0a13279721383d59eebcbe8459ae45b6}{y\_velocity}};     }
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_a424e63eb31285c39c91d2752b5c41191}{x\_velocity}};     }
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_ad12fc34ce789bce6c8a05d8a17138534}{height}};         }
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_a2474a5474cbff19523a51eb1de01cda4}{width}};          }
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_aef160b7437d94056f1dc59646cd5b87d}{score}};          }
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_ball}{Ball}}\{}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_af1617c91937fbd9d9d670940427d9b44}{x\_pos}};          }
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_a375120430014d7e06dcc37d9ca4fcdb8}{y\_pos}};          }
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_a424e63eb31285c39c91d2752b5c41191}{x\_velocity}};     }
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_a0a13279721383d59eebcbe8459ae45b6}{y\_velocity}};     }
+\DoxyCodeLine{63     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_aeedc2afa1e522527db2235d0700a3b0d}{color}}; }
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_ad12fc34ce789bce6c8a05d8a17138534}{height}};         }
+\DoxyCodeLine{65     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_ball_a2474a5474cbff19523a51eb1de01cda4}{width}};          }
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_arena}{Arena}}\{}
+\DoxyCodeLine{72     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_a5f0bb6d8a3e66525c3e6264cb8288e43}{x\_max}};          }
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_ae0951dcafafdc96ac1d8361c672d47e2}{x\_min}};          }
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_ad033aea530fbbcf5bcd6cd98d882e3a5}{y\_max}};          }
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_a7941ddc7e35fffb8864af1e922814401}{y\_min}};          }
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_ad12fc34ce789bce6c8a05d8a17138534}{height}};         }
+\DoxyCodeLine{77     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_arena_a2474a5474cbff19523a51eb1de01cda4}{width}};          }
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83 \textcolor{keyword}{enum} \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{CollisionType}} \{}
+\DoxyCodeLine{84   \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44a7ffb7e08daf9385fa15411b66b3694c9}{NoCollision}},          }
+\DoxyCodeLine{85   \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44ad0ce191840982cc00aaeefe176b0fb4e}{SideCollision}},        }
+\DoxyCodeLine{86   \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44aa26284f42681dc42e4f3386e221b47d8}{TopBottomCollision}}    }
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93 \textcolor{keyword}{enum} \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}} \{}
+\DoxyCodeLine{94     \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa77d1b58e26a2a3d61ce38e09764cbc19}{PLAYER1}},            }
+\DoxyCodeLine{95     \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa32a327d66c65387bb124f6c9408ff90b}{PLAYER2}},            }
+\DoxyCodeLine{96     \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ffa543a4628f164012f3408599a628c66dd}{NO\_WINNER}}           }
+\DoxyCodeLine{97 \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{102 void (\mbox{\hyperlink{model_8h_ad2535f105d57912f0b1b2c5ab6ef03d4}{resetPositions}})();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107 void (\mbox{\hyperlink{model_8h_adca5c0e0a541bc88f8cada3b8f1fc237}{reset}})();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112 void (\mbox{\hyperlink{model_8h_afe55e58ebbd50b7aa93ca36dd2d3cc0e}{resetGame}})();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{119 void (\mbox{\hyperlink{model_8h_a6a9bb453b65dbb2c900ed07be1d20080}{movePlayerUp}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126 void (\mbox{\hyperlink{model_8h_aa4221ebebfd16ed05adc048c3f114cc3}{movePlayerDown}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{133 void (\mbox{\hyperlink{model_8h_a03a1e6c4110c41da56bf607ac64802ac}{movePlayerRight}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{140 void (\mbox{\hyperlink{model_8h_aa8cb8346764b9088a86f6851c8344cbc}{movePlayerLeft}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{145 void (\mbox{\hyperlink{model_8h_ad5ee75852c746eae882640b7ce153b22}{activatePowerup1}})();}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{150 void(\mbox{\hyperlink{model_8h_a6cc677023b794fba8dd33568ae4a6a95}{activatePowerup2}})();}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{155 void (\mbox{\hyperlink{model_8h_a52de0aa82cf3bdff1c4a6a803bd29f6c}{resetPowerup}})();}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{162 void (\mbox{\hyperlink{model_8h_ae5a47fae3a1ea0274a1cee0492a3d17f}{moveAI}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{170 \textcolor{keyword}{enum} \mbox{\hyperlink{model_8h_aa884075f403706dceea29a61771a0d44}{CollisionType}} (\mbox{\hyperlink{model_8h_ac07055d4bad5e153b875d19461cd0026}{checkBallCollision}})(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_player}{Player}} *\mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}});}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{178 bool (\mbox{\hyperlink{model_8h_a888f87088027abf44920c0b80e7e91b5}{moveBall}})();}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{186 bool (\mbox{\hyperlink{model_8h_a0725ea9572d0cf8d99acb25a69a1427b}{isGoal}})();}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{193 \textcolor{keyword}{enum} \mbox{\hyperlink{model_8h_af06e4e7a85ce74cbf2bcc2e6b36960ff}{Winner}} (\mbox{\hyperlink{model_8h_ab548fab14415b363ed15020abbcf4480}{checkScore}})();}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{198 void (\mbox{\hyperlink{model_8h_af05d90a9cc660459855c903a579dd45f}{moveCursor}})(\textcolor{keywordtype}{int} dx, \textcolor{keywordtype}{int} dy);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{203 uint8\_t (\mbox{\hyperlink{model_8h_aabbae577c2720a545cfd084e1e0b9eda}{compressData}})(\textcolor{keywordtype}{int} \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, \textcolor{keywordtype}{int} compressor);}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{208 uint8\_t (\mbox{\hyperlink{model_8h_a65861515161a3ce23cdc350fec913d6b}{decompressData}})(uint8\_t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}}, \textcolor{keywordtype}{int} decompressor);}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{213 void (\mbox{\hyperlink{model_8h_ac24360ee4d3ed4835f82c86d907c59dc}{switchPlayers}})();}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{218 void (\mbox{\hyperlink{model_8h_aff8e7c0319beb75ae9773863d54d8458}{switchColorPlayers}})();}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{223 void (\mbox{\hyperlink{model_8h_a987286308ffeb31267614bc23dcbde07}{switchBall}})();}
+
+\end{DoxyCode}

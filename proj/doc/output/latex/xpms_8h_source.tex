@@ -1,0 +1,99 @@
+\hypertarget{xpms_8h_source}{}\doxysection{xpms.\+h}
+\label{xpms_8h_source}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/xpms.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/xpms.h}}
+\mbox{\hyperlink{xpms_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../sprites/menu/main\_menu.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../sprites/menu/menu\_credits\_option.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../sprites/menu/menu\_multiplayer\_option.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../sprites/menu/menu\_singleplayer\_option.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../sprites/menu/credits\_instructions.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../sprites/cursor.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../sprites/arena/arena.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}../sprites/numbers/-\/.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}../sprites/numbers/0.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../sprites/numbers/1.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../sprites/numbers/2.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../sprites/numbers/3.h"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../sprites/numbers/4.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../sprites/numbers/5.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../sprites/numbers/6.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../sprites/numbers/7.h"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../sprites/numbers/8.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../sprites/numbers/9.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/0.h"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/1.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/2.h"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/3.h"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/4.h"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/5.h"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/6.h"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/7.h"{}}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/8.h"{}}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/9.h"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}../sprites/smaller\_numbers/colon.h"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include "{}../sprites/game/game\_over.h"{}}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}../sprites/game/game\_win.h"{}}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include "{}../sprites/game/waiting.h"{}}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include "{}../sprites/game/ball.h"{}}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include "{}../sprites/menu/blocked.h"{}}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include "{}../sprites/powerup/cooldown0v3.h"{}}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include "{}../sprites/powerup/cooldown15.h"{}}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include "{}../sprites/powerup/cooldown30.h"{}}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include "{}../sprites/powerup/cooldown45.h"{}}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include "{}../sprites/powerup/cooldown60.h"{}}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include "{}../sprites/powerup/activated.h"{}}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52 \textcolor{keyword}{enum} \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52faf}{images}}\{}
+\DoxyCodeLine{53     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafac22743f1fc74de09544ecc9bab74a17b}{MAIN\_MENU}},}
+\DoxyCodeLine{54     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaf2eff094ec13c6bc5b99f64a33d4a3b3}{MENU\_SINGLEPLAYER\_OPTION}},}
+\DoxyCodeLine{55     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa77072fe74f09377816cb6eaa8a668d0f}{MENU\_MULTIPLAYER\_OPTION}},}
+\DoxyCodeLine{56     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa8600a7321a682c1b926bbd19b5cd0f14}{MENU\_CREDITS\_OPTION}},}
+\DoxyCodeLine{57     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa63cd5d9b665699b0b17c898a414c63d5}{CURSOR}},}
+\DoxyCodeLine{58     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaa5856cb7eb651841a7af6788ab1c528d}{ARENA}},}
+\DoxyCodeLine{59     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa36f7cc172dfe8846b32b3bb288d1221f}{DASH}},}
+\DoxyCodeLine{60     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafae117e3533122c80b262257b49b21cddf}{ZERO}},}
+\DoxyCodeLine{61     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa7a725f13af144bdef532d0389ba75e0d}{ONE}},}
+\DoxyCodeLine{62     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa0e793500a63ffa575b9b712ca3bc9851}{TWO}},}
+\DoxyCodeLine{63     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa1251fbf93888ad32fe0ae54d49bcef17}{THREE}},}
+\DoxyCodeLine{64     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa23d7ef5341c6930d19b2ecbb997977cf}{FOUR}},}
+\DoxyCodeLine{65     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa3a40d11d30db182ab8f9846aa9458bec}{FIVE}},}
+\DoxyCodeLine{66     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaadffddd32c3e7497e32cd7e430c9c106}{SIX}},}
+\DoxyCodeLine{67     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa9a193f3e84352f3fbbe44f8d275a820c}{SEVEN}},}
+\DoxyCodeLine{68     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa2fd39b67b424f4ea3b4c11ce3195ab8b}{EIGHT}},}
+\DoxyCodeLine{69     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaea09d09b793ccc4a4b5983368d18a4ab}{NINE}},}
+\DoxyCodeLine{70     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafac59e996ea6362f921d0223de036a6b4a}{GAME\_OVER\_SCREEN}},}
+\DoxyCodeLine{71     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafae66890fe936d87fd857c8cfde578f849}{GAME\_WIN\_SCREEN}},}
+\DoxyCodeLine{72     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaef22254e129f688d9e9c4f63fc7a740b}{WAITING\_SCREEN}},}
+\DoxyCodeLine{73     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa991915db46ccce40bbad46d12e49412c}{CREDITS\_INSTRUCTIONS}},}
+\DoxyCodeLine{74     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa122982e0965bc99461d5bc10b48a5ba3}{SMALLER\_ZERO}},}
+\DoxyCodeLine{75     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa820a2eb905c6b5c91ef8fd75fbd8e431}{SMALLER\_ONE}},}
+\DoxyCodeLine{76     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa8ac145547e71f49c5b6460b9106ecb75}{SMALLER\_TWO}},}
+\DoxyCodeLine{77     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa7e528417a68bf9a58a471827fe8d55f6}{SMALLER\_THREE}},}
+\DoxyCodeLine{78     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa6674426a892e69175ee16ab861651060}{SMALLER\_FOUR}},}
+\DoxyCodeLine{79     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa96c6e7f3eb0e6139d34184711ec3b6a3}{SMALLER\_FIVE}},}
+\DoxyCodeLine{80     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa63a414b90f14675d023bb146ed2c0ebf}{SMALLER\_SIX}},}
+\DoxyCodeLine{81     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa9ecaf44099d31a3259dfc8f5713f3727}{SMALLER\_SEVEN}},}
+\DoxyCodeLine{82     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa9ddbb2a856a63f3905d975d2fefced6b}{SMALLER\_EIGHT}},}
+\DoxyCodeLine{83     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafaa2c775f482ecbb4f7fb439b56d5cc37a}{SMALLER\_NINE}},}
+\DoxyCodeLine{84     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa29cf94637337909c3813bb50d6e9b3ee}{COLON}},}
+\DoxyCodeLine{85     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa7ead155cf83630381fcd556afd7040e4}{BLOCKED\_SCREEN}},}
+\DoxyCodeLine{86     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa40eaf313915d839696cdf2922d1bcfd6}{COOLDOWN\_0v3}},}
+\DoxyCodeLine{87     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa16792d96185cf2741130e0b14f4dfc0a}{COOLDOWN\_15}},}
+\DoxyCodeLine{88     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafacd8b83213c0af6c7497ca793f2e782ef}{COOLDOWN\_30}},}
+\DoxyCodeLine{89     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafabb5471b63a28745c03b9198f47819e70}{COOLDOWN\_45}},}
+\DoxyCodeLine{90     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafad95c7a4bb35f0c4dc3ba01a8e5890937}{COOLDOWN\_60}},}
+\DoxyCodeLine{91     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa84b328a7ebdea4c8c4ed62e035ada28d}{ACTIVATED}},}
+\DoxyCodeLine{92     \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52fafa8c9d13c37466e1a5135401a0bb930879}{BALL}}}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99 xpm\_image\_t \mbox{\hyperlink{xpms_8h_a51dcdeb45e5f187043150dc943c52faf}{images}}[40];}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105 void (\mbox{\hyperlink{xpms_8h_a297af57e28b63a9537fdc82eddd80422}{load\_xpms}})();}
+
+\end{DoxyCode}

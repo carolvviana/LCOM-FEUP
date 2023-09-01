@@ -1,0 +1,8 @@
+<map id="serialp_connection" name="serialp_connection">
+<area shape="rect" id="node1" title="Estabilishes a first connection (and connects) between the two serial ports. Determines which player ..." alt="" coords="5,31,135,57"/>
+<area shape="rect" id="node2" href="$serialport_8c.html#a0923a173e5234a5aac43789de70142e9" title="Sends data to the serial port: First checks status and sees if THR and TSR are empty,..." alt="" coords="183,31,309,57"/>
+<area shape="rect" id="node3" href="$serialport_8c.html#af7a8ffc2d2a50c92c68480eac1e7b9c7" title="Reads the status of the serial port from Line Status Register and checks if there are no errors." alt="" coords="357,31,491,57"/>
+<area shape="rect" id="node4" href="$serialport_8c.html#af0b7fadf66deb5979674e1ff80e31129" title="Checks if the parameter status does not have Parity, overrun or framing errors." alt="" coords="539,5,674,32"/>
+<area shape="rect" id="node5" href="$serialport_8c.html#a837ae217c80e9748327e27e8cac6e1e4" title="Reads the status of the serial port from the LSR." alt="" coords="543,56,670,83"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="722,56,812,83"/>
+</map>

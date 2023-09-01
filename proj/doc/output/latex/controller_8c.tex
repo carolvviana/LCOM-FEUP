@@ -1,0 +1,392 @@
+\hypertarget{controller_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/mvc/controller.c File Reference}
+\label{controller_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.c}}
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+Include dependency graph for controller.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{controller_8c_afa591ec10165f04e9291e6592a0f7510}{menu\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Initializes the game states. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_a37e49d800adbc835666794ce4e9cce58}{single\+Player\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the single player game state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_a512eab05844c70937d5eda8a40f47884}{waiting\+Connection\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the waiting connection state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_a9b32f04a33bcc2480d7a65173ff4634d}{multi\+Player\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the multi player game state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_a3436a32f39e1fc40a322fa92edb7c107}{credits\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the credits state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_abc304eb85f7c63a2877fa71bd2dba25c}{game\+Over\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the game over state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_ab2e074c3d3b5a78c93bcb0a574f95037}{game\+Win\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the game win state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8c_a6aaefbda93187a03caf0d0ebc62d09bc}{blocked\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the blocked state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{controller_8c_a270843ee459a6780abab7ed39e54080e}{sign\+\_\+x}}
+\item 
+int \mbox{\hyperlink{controller_8c_af4388982f680364a686afaee66dc8421}{sign\+\_\+y}}
+\item 
+int \mbox{\hyperlink{controller_8c_a617a47c70795bcff659815ad0efd2266}{counter}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{controller_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}{data\+\_\+x\+\_\+ball}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{controller_8c_addc0f3d2badd6df1dd41088b117f16f5}{data\+\_\+y\+\_\+ball}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{controller_8c_a73090bb6f3fb51137a791fee01794a36}{player}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{controller_8c_abf54e2844a0903331c1a36028f86f821}{player2}}
+\item 
+struct \mbox{\hyperlink{struct_player}{Player}} \mbox{\hyperlink{controller_8c_a220774e5dffbb87adcc40884e1fb8260}{AIplayer}}
+\item 
+struct \mbox{\hyperlink{struct_ball}{Ball}} \mbox{\hyperlink{controller_8c_aec7d031690b4f8260cedcca03ddc1854}{ball}}
+\item 
+int \mbox{\hyperlink{controller_8c_af96da98283ea6c9838dd20bb99d3306e}{action\+Left\+Timeout}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{controller_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}}
+\item 
+struct packet \mbox{\hyperlink{controller_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}} \mbox{\hyperlink{controller_8c_a9d8d873964fd143f113fce55e15c37fb}{cursor}}
+\item 
+int \mbox{\hyperlink{controller_8c_adde60ccd7d71fcf56b97745ba231cef7}{powerup\+Active\+Timer}}
+\item 
+int \mbox{\hyperlink{controller_8c_a3863ac0fa1280a1ab4bd344a8c5c4efc}{powerup\+Cooldown\+Timer}}
+\item 
+bool \mbox{\hyperlink{controller_8c_accff237892d192ff512d54bd8e118601}{exit\+\_\+game}}
+\item 
+\mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}} \mbox{\hyperlink{controller_8c_aed766d1a38b70be51df494da921471fa}{game\+\_\+state}} = \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+\item 
+struct \mbox{\hyperlink{structstate}{state}} \mbox{\hyperlink{controller_8c_af8a6d2afd96498bf849eb79617cdc526}{game\+\_\+states\+\_\+list}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{controller_8c_a6aaefbda93187a03caf0d0ebc62d09bc}\label{controller_8c_a6aaefbda93187a03caf0d0ebc62d09bc}} 
+\index{controller.c@{controller.c}!blockedController@{blockedController}}
+\index{blockedController@{blockedController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{blockedController()}{blockedController()}}
+{\footnotesize\ttfamily void() blocked\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the blocked state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_a6aaefbda93187a03caf0d0ebc62d09bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_a3436a32f39e1fc40a322fa92edb7c107}\label{controller_8c_a3436a32f39e1fc40a322fa92edb7c107}} 
+\index{controller.c@{controller.c}!creditsController@{creditsController}}
+\index{creditsController@{creditsController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{creditsController()}{creditsController()}}
+{\footnotesize\ttfamily void() credits\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the credits state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_a3436a32f39e1fc40a322fa92edb7c107_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_abc304eb85f7c63a2877fa71bd2dba25c}\label{controller_8c_abc304eb85f7c63a2877fa71bd2dba25c}} 
+\index{controller.c@{controller.c}!gameOverController@{gameOverController}}
+\index{gameOverController@{gameOverController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{gameOverController()}{gameOverController()}}
+{\footnotesize\ttfamily void() game\+Over\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the game over state. 
+
+Controller of the game win state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_abc304eb85f7c63a2877fa71bd2dba25c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_ab2e074c3d3b5a78c93bcb0a574f95037}\label{controller_8c_ab2e074c3d3b5a78c93bcb0a574f95037}} 
+\index{controller.c@{controller.c}!gameWinController@{gameWinController}}
+\index{gameWinController@{gameWinController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{gameWinController()}{gameWinController()}}
+{\footnotesize\ttfamily void() game\+Win\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the game win state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_ab2e074c3d3b5a78c93bcb0a574f95037_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_afa591ec10165f04e9291e6592a0f7510}\label{controller_8c_afa591ec10165f04e9291e6592a0f7510}} 
+\index{controller.c@{controller.c}!menuController@{menuController}}
+\index{menuController@{menuController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{menuController()}{menuController()}}
+{\footnotesize\ttfamily void() menu\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Initializes the game states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_afa591ec10165f04e9291e6592a0f7510_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_a9b32f04a33bcc2480d7a65173ff4634d}\label{controller_8c_a9b32f04a33bcc2480d7a65173ff4634d}} 
+\index{controller.c@{controller.c}!multiPlayerController@{multiPlayerController}}
+\index{multiPlayerController@{multiPlayerController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{multiPlayerController()}{multiPlayerController()}}
+{\footnotesize\ttfamily void() multi\+Player\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the multi player game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_a9b32f04a33bcc2480d7a65173ff4634d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_a37e49d800adbc835666794ce4e9cce58}\label{controller_8c_a37e49d800adbc835666794ce4e9cce58}} 
+\index{controller.c@{controller.c}!singlePlayerController@{singlePlayerController}}
+\index{singlePlayerController@{singlePlayerController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{singlePlayerController()}{singlePlayerController()}}
+{\footnotesize\ttfamily void() single\+Player\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the single player game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_a37e49d800adbc835666794ce4e9cce58_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8c_a512eab05844c70937d5eda8a40f47884}\label{controller_8c_a512eab05844c70937d5eda8a40f47884}} 
+\index{controller.c@{controller.c}!waitingConnectionController@{waitingConnectionController}}
+\index{waitingConnectionController@{waitingConnectionController}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{waitingConnectionController()}{waitingConnectionController()}}
+{\footnotesize\ttfamily void() waiting\+Connection\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the waiting connection state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8c_a512eab05844c70937d5eda8a40f47884_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{controller_8c_af96da98283ea6c9838dd20bb99d3306e}\label{controller_8c_af96da98283ea6c9838dd20bb99d3306e}} 
+\index{controller.c@{controller.c}!actionLeftTimeout@{actionLeftTimeout}}
+\index{actionLeftTimeout@{actionLeftTimeout}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{actionLeftTimeout}{actionLeftTimeout}}
+{\footnotesize\ttfamily int action\+Left\+Timeout\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a220774e5dffbb87adcc40884e1fb8260}\label{controller_8c_a220774e5dffbb87adcc40884e1fb8260}} 
+\index{controller.c@{controller.c}!AIplayer@{AIplayer}}
+\index{AIplayer@{AIplayer}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{AIplayer}{AIplayer}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} AIplayer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_aec7d031690b4f8260cedcca03ddc1854}\label{controller_8c_aec7d031690b4f8260cedcca03ddc1854}} 
+\index{controller.c@{controller.c}!ball@{ball}}
+\index{ball@{ball}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{ball}{ball}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_ball}{Ball}} ball\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a617a47c70795bcff659815ad0efd2266}\label{controller_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{controller.c@{controller.c}!counter@{counter}}
+\index{counter@{counter}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a9d8d873964fd143f113fce55e15c37fb}\label{controller_8c_a9d8d873964fd143f113fce55e15c37fb}} 
+\index{controller.c@{controller.c}!cursor@{cursor}}
+\index{cursor@{cursor}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_cursor}{Cursor}} cursor\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a325819a8e492ac69542e8b31705af6e9}\label{controller_8c_a325819a8e492ac69542e8b31705af6e9}} 
+\index{controller.c@{controller.c}!data@{data}}
+\index{data@{data}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}\label{controller_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}} 
+\index{controller.c@{controller.c}!data\_x\_ball@{data\_x\_ball}}
+\index{data\_x\_ball@{data\_x\_ball}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{data\_x\_ball}{data\_x\_ball}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+x\+\_\+ball\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_addc0f3d2badd6df1dd41088b117f16f5}\label{controller_8c_addc0f3d2badd6df1dd41088b117f16f5}} 
+\index{controller.c@{controller.c}!data\_y\_ball@{data\_y\_ball}}
+\index{data\_y\_ball@{data\_y\_ball}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{data\_y\_ball}{data\_y\_ball}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+y\+\_\+ball\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_accff237892d192ff512d54bd8e118601}\label{controller_8c_accff237892d192ff512d54bd8e118601}} 
+\index{controller.c@{controller.c}!exit\_game@{exit\_game}}
+\index{exit\_game@{exit\_game}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{exit\_game}{exit\_game}}
+{\footnotesize\ttfamily bool exit\+\_\+game\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_aed766d1a38b70be51df494da921471fa}\label{controller_8c_aed766d1a38b70be51df494da921471fa}} 
+\index{controller.c@{controller.c}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{game\_state}{game\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}} game\+\_\+state = \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}}
+
+\mbox{\Hypertarget{controller_8c_af8a6d2afd96498bf849eb79617cdc526}\label{controller_8c_af8a6d2afd96498bf849eb79617cdc526}} 
+\index{controller.c@{controller.c}!game\_states\_list@{game\_states\_list}}
+\index{game\_states\_list@{game\_states\_list}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{game\_states\_list}{game\_states\_list}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structstate}{state}} game\+\_\+states\+\_\+list\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}, \mbox{\hyperlink{controller_8c_afa591ec10165f04e9291e6592a0f7510}{menuController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60ad03008f18d2c8eef7043f88285f6e112}{SINGLE\_PLAYER\_GAME}}, \mbox{\hyperlink{controller_8c_a37e49d800adbc835666794ce4e9cce58}{singlePlayerController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a9cfcffdf6beb1710c6070a86a4251bc5}{MULTI\_PLAYER\_GAME}}, \mbox{\hyperlink{controller_8c_a9b32f04a33bcc2480d7a65173ff4634d}{multiPlayerController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a243297a16ab0d9b44d34b1b7511159ad}{WAITING\_CONNECTION}}, \mbox{\hyperlink{controller_8c_a512eab05844c70937d5eda8a40f47884}{waitingConnectionController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acb9e6f410cf374803d7ff561a15bc4ef}{CREDITS}}, \mbox{\hyperlink{controller_8c_a3436a32f39e1fc40a322fa92edb7c107}{creditsController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a871723195985a4ae22d7e10d99bf8a00}{GAME\_OVER}}, \mbox{\hyperlink{controller_8c_abc304eb85f7c63a2877fa71bd2dba25c}{gameOverController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acba52b1e8f4f19033175ea75a453388c}{GAME\_WIN}}, \mbox{\hyperlink{controller_8c_ab2e074c3d3b5a78c93bcb0a574f95037}{gameWinController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a376c1b6a3f75d283a2efacf737438d61}{BLOCKED}}, \mbox{\hyperlink{controller_8c_a6aaefbda93187a03caf0d0ebc62d09bc}{blockedController}}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}, NULL\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a44107b3a6a5f3877d31c9946fb8bf911}{NONE\_STATE}}, NULL\},}
+\DoxyCodeLine{  \{0, NULL\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{controller_8c_a3b2e64ffb96c650d6525c99be01c7331}\label{controller_8c_a3b2e64ffb96c650d6525c99be01c7331}} 
+\index{controller.c@{controller.c}!mouse\_packet@{mouse\_packet}}
+\index{mouse\_packet@{mouse\_packet}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet}{mouse\_packet}}
+{\footnotesize\ttfamily struct packet mouse\+\_\+packet\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a73090bb6f3fb51137a791fee01794a36}\label{controller_8c_a73090bb6f3fb51137a791fee01794a36}} 
+\index{controller.c@{controller.c}!player@{player}}
+\index{player@{player}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} player\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_abf54e2844a0903331c1a36028f86f821}\label{controller_8c_abf54e2844a0903331c1a36028f86f821}} 
+\index{controller.c@{controller.c}!player2@{player2}}
+\index{player2@{player2}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{player2}{player2}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_player}{Player}} player2\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_adde60ccd7d71fcf56b97745ba231cef7}\label{controller_8c_adde60ccd7d71fcf56b97745ba231cef7}} 
+\index{controller.c@{controller.c}!powerupActiveTimer@{powerupActiveTimer}}
+\index{powerupActiveTimer@{powerupActiveTimer}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{powerupActiveTimer}{powerupActiveTimer}}
+{\footnotesize\ttfamily int powerup\+Active\+Timer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a3863ac0fa1280a1ab4bd344a8c5c4efc}\label{controller_8c_a3863ac0fa1280a1ab4bd344a8c5c4efc}} 
+\index{controller.c@{controller.c}!powerupCooldownTimer@{powerupCooldownTimer}}
+\index{powerupCooldownTimer@{powerupCooldownTimer}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{powerupCooldownTimer}{powerupCooldownTimer}}
+{\footnotesize\ttfamily int powerup\+Cooldown\+Timer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_aa1de7a5557e9d96b83cf03f73c92163f}\label{controller_8c_aa1de7a5557e9d96b83cf03f73c92163f}} 
+\index{controller.c@{controller.c}!scancode@{scancode}}
+\index{scancode@{scancode}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily uint8\+\_\+t scancode\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_a270843ee459a6780abab7ed39e54080e}\label{controller_8c_a270843ee459a6780abab7ed39e54080e}} 
+\index{controller.c@{controller.c}!sign\_x@{sign\_x}}
+\index{sign\_x@{sign\_x}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{sign\_x}{sign\_x}}
+{\footnotesize\ttfamily int sign\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{controller_8c_af4388982f680364a686afaee66dc8421}\label{controller_8c_af4388982f680364a686afaee66dc8421}} 
+\index{controller.c@{controller.c}!sign\_y@{sign\_y}}
+\index{sign\_y@{sign\_y}!controller.c@{controller.c}}
+\doxysubsubsection{\texorpdfstring{sign\_y}{sign\_y}}
+{\footnotesize\ttfamily int sign\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+

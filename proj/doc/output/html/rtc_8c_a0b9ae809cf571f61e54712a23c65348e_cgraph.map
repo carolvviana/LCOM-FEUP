@@ -1,0 +1,6 @@
+<map id="rtc_ih" name="rtc_ih">
+<area shape="rect" id="node1" title="RTC&#39;s interrupt handler to update real time information on struct." alt="" coords="5,31,59,57"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a0e3f625df84fe91b6d348d24940445e8" title="Updates the real_time_info struct with the current time." alt="" coords="107,31,249,57"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#a741d66be00b18bb3f387a996cdf3bf90" title="Converts the number in BCD to binary." alt="" coords="297,5,441,32"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="324,56,414,83"/>
+</map>

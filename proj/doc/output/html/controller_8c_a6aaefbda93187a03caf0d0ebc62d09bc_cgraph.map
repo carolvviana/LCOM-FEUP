@@ -1,0 +1,12 @@
+<map id="blockedController" name="blockedController">
+<area shape="rect" id="node1" title="Controller of the blocked state." alt="" coords="5,132,127,159"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#af7831592ef04114ca9b46e672c0e646b" title="Clears a secondary buffer." alt="" coords="181,5,269,32"/>
+<area shape="rect" id="node3" href="$viewer_8c.html#a7e16b9d0a30c3711187f7d710dbf507d" title="Draws the &quot;blocked&quot; menu on the screen." alt="" coords="175,56,275,83"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#a7312ae0798b69b9b882f214132f3125c" title="Draws a xpm mouse image on the screen." alt="" coords="178,107,272,133"/>
+<area shape="rect" id="node7" href="$viewer_8c.html#ac15d63a0b643d163c8843988fd299fec" title="Draws the time on the screen." alt="" coords="185,157,265,184"/>
+<area shape="rect" id="node9" href="$model_8c.html#af05d90a9cc660459855c903a579dd45f" title="Moves the cursor by dx and dy." alt="" coords="180,208,270,235"/>
+<area shape="rect" id="node10" href="$gpu_8c.html#ae1a99ee23f3b94cac3562bc674209ec3" title="Passes the new buffer contents to the main buffer." alt="" coords="180,259,270,285"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9" title="Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the ..." alt="" coords="343,107,423,133"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="490,107,573,133"/>
+<area shape="rect" id="node8" href="$viewer_8c.html#a8690cdc2f16db4e1e85454c7bf4d3375" title=" " alt="" coords="323,157,442,184"/>
+</map>

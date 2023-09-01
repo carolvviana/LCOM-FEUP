@@ -1,0 +1,320 @@
+\hypertarget{serialport_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/serialport/serialport.c File Reference}
+\label{serialport_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/serialport/serialport.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}serialport.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/utils.\+h$>$}\newline
+Include dependency graph for serialport.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serialport_8c_a1ea6d4c0f0217715d1f79f1cf57e9c50}{DEBUG\+\_\+\+MSG}}(msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{serialport_8c_a903a77c54afa75ec3fa313d35471a4ce}{init\+\_\+serialp}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the serial port\+: Enables serialport interrupts and sets the serialport to the correct configuration (interrupt when there is data avilable). Reads all data that might be unread and signals it is ready to connect. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{serialport_8c_a4cb60b252d2c9db2d53985dd520d5848}{serialp\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Serial\+Port interrupt handler. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_a0c6a9f33696579390bf06bf4eb054a05}{read\+\_\+data\+\_\+serialp}} ()
+\begin{DoxyCompactList}\small\item\em Reads data from the serial port\+: Checks status, sees if there is any data received, reads it and stores it in the variable data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{serialport_8c_a837ae217c80e9748327e27e8cac6e1e4}{serialp\+\_\+get\+\_\+status}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Reads the status of the serial port from the LSR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{serialport_8c_af0b7fadf66deb5979674e1ff80e31129}{serialp\+\_\+check\+\_\+error}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Checks if the parameter status does not have Parity, overrun or framing errors. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_af7a8ffc2d2a50c92c68480eac1e7b9c7}{read\+\_\+status\+\_\+serialp}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em Reads the status of the serial port from Line Status Register and checks if there are no errors. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_a0923a173e5234a5aac43789de70142e9}{send\+\_\+data\+\_\+serialp}} (uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}})
+\begin{DoxyCompactList}\small\item\em Sends data to the serial port\+: First checks status and sees if THR and TSR are empty, then sends the data. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_a51d0da0e2cfd471644e3e0f1e649373d}{serialp\+\_\+connection}} (int $\ast$ready)
+\begin{DoxyCompactList}\small\item\em Estabilishes a first connection (and connects) between the two serial ports. Determines which player is which and sends the ready signal. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_acb5e2314ffab528191e83f9836ab0451}{serialp\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes the serial port interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_aef6b9501e2df0aca48c25239718191c7}{serialp\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the serial port interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{serialport_8c_a84789a9e59191b48170648424f170820}{write\+\_\+address\+\_\+with\+\_\+offset}} (int offset, uint8\+\_\+t \mbox{\hyperlink{controller_8c_a325819a8e492ac69542e8b31705af6e9}{data}})
+\begin{DoxyCompactList}\small\item\em Writes the parameter data to a certain address (address of COM1 + offset) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{serialport_8c_a325819a8e492ac69542e8b31705af6e9}{data}} = 0x00
+\item 
+uint8\+\_\+t \mbox{\hyperlink{serialport_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}{data\+\_\+x\+\_\+ball}} = 0x00
+\item 
+uint8\+\_\+t \mbox{\hyperlink{serialport_8c_addc0f3d2badd6df1dd41088b117f16f5}{data\+\_\+y\+\_\+ball}} = 0x00
+\item 
+int \mbox{\hyperlink{serialport_8c_ae057c73800980befa6db2c20c119a7f5}{hook\+\_\+id\+\_\+serialp}} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{serialport_8c_a1ea6d4c0f0217715d1f79f1cf57e9c50}\label{serialport_8c_a1ea6d4c0f0217715d1f79f1cf57e9c50}} 
+\index{serialport.c@{serialport.c}!DEBUG\_MSG@{DEBUG\_MSG}}
+\index{DEBUG\_MSG@{DEBUG\_MSG}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MSG}{DEBUG\_MSG}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+MSG(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{serialport_8c_a903a77c54afa75ec3fa313d35471a4ce}\label{serialport_8c_a903a77c54afa75ec3fa313d35471a4ce}} 
+\index{serialport.c@{serialport.c}!init\_serialp@{init\_serialp}}
+\index{init\_serialp@{init\_serialp}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{init\_serialp()}{init\_serialp()}}
+{\footnotesize\ttfamily int() init\+\_\+serialp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the serial port\+: Enables serialport interrupts and sets the serialport to the correct configuration (interrupt when there is data avilable). Reads all data that might be unread and signals it is ready to connect. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_a903a77c54afa75ec3fa313d35471a4ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_a0c6a9f33696579390bf06bf4eb054a05}\label{serialport_8c_a0c6a9f33696579390bf06bf4eb054a05}} 
+\index{serialport.c@{serialport.c}!read\_data\_serialp@{read\_data\_serialp}}
+\index{read\_data\_serialp@{read\_data\_serialp}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{read\_data\_serialp()}{read\_data\_serialp()}}
+{\footnotesize\ttfamily int() read\+\_\+data\+\_\+serialp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads data from the serial port\+: Checks status, sees if there is any data received, reads it and stores it in the variable data. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_a0c6a9f33696579390bf06bf4eb054a05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_af7a8ffc2d2a50c92c68480eac1e7b9c7}\label{serialport_8c_af7a8ffc2d2a50c92c68480eac1e7b9c7}} 
+\index{serialport.c@{serialport.c}!read\_status\_serialp@{read\_status\_serialp}}
+\index{read\_status\_serialp@{read\_status\_serialp}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{read\_status\_serialp()}{read\_status\_serialp()}}
+{\footnotesize\ttfamily int() read\+\_\+status\+\_\+serialp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status of the serial port from Line Status Register and checks if there are no errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_af7a8ffc2d2a50c92c68480eac1e7b9c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_a0923a173e5234a5aac43789de70142e9}\label{serialport_8c_a0923a173e5234a5aac43789de70142e9}} 
+\index{serialport.c@{serialport.c}!send\_data\_serialp@{send\_data\_serialp}}
+\index{send\_data\_serialp@{send\_data\_serialp}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{send\_data\_serialp()}{send\_data\_serialp()}}
+{\footnotesize\ttfamily int() send\+\_\+data\+\_\+serialp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Sends data to the serial port\+: First checks status and sees if THR and TSR are empty, then sends the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_a0923a173e5234a5aac43789de70142e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_af0b7fadf66deb5979674e1ff80e31129}\label{serialport_8c_af0b7fadf66deb5979674e1ff80e31129}} 
+\index{serialport.c@{serialport.c}!serialp\_check\_error@{serialp\_check\_error}}
+\index{serialp\_check\_error@{serialp\_check\_error}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_check\_error()}{serialp\_check\_error()}}
+{\footnotesize\ttfamily int serialp\+\_\+check\+\_\+error (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Checks if the parameter status does not have Parity, overrun or framing errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8c_a51d0da0e2cfd471644e3e0f1e649373d}\label{serialport_8c_a51d0da0e2cfd471644e3e0f1e649373d}} 
+\index{serialport.c@{serialport.c}!serialp\_connection@{serialp\_connection}}
+\index{serialp\_connection@{serialp\_connection}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_connection()}{serialp\_connection()}}
+{\footnotesize\ttfamily int() serialp\+\_\+connection (\begin{DoxyParamCaption}\item[{int $\ast$}]{ready }\end{DoxyParamCaption})}
+
+
+
+Estabilishes a first connection (and connects) between the two serial ports. Determines which player is which and sends the ready signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & \char`\"{}ready\char`\"{} to send ready-\/signal between serialports \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_a51d0da0e2cfd471644e3e0f1e649373d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_a837ae217c80e9748327e27e8cac6e1e4}\label{serialport_8c_a837ae217c80e9748327e27e8cac6e1e4}} 
+\index{serialport.c@{serialport.c}!serialp\_get\_status@{serialp\_get\_status}}
+\index{serialp\_get\_status@{serialp\_get\_status}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_get\_status()}{serialp\_get\_status()}}
+{\footnotesize\ttfamily int serialp\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status of the serial port from the LSR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{serialport_8c_a837ae217c80e9748327e27e8cac6e1e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_a4cb60b252d2c9db2d53985dd520d5848}\label{serialport_8c_a4cb60b252d2c9db2d53985dd520d5848}} 
+\index{serialport.c@{serialport.c}!serialp\_ih@{serialp\_ih}}
+\index{serialp\_ih@{serialp\_ih}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_ih()}{serialp\_ih()}}
+{\footnotesize\ttfamily void() serialp\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Serial\+Port interrupt handler. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialport_8c_a4cb60b252d2c9db2d53985dd520d5848_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{serialport_8c_acb5e2314ffab528191e83f9836ab0451}\label{serialport_8c_acb5e2314ffab528191e83f9836ab0451}} 
+\index{serialport.c@{serialport.c}!serialp\_subscribe\_int@{serialp\_subscribe\_int}}
+\index{serialp\_subscribe\_int@{serialp\_subscribe\_int}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_subscribe\_int()}{serialp\_subscribe\_int()}}
+{\footnotesize\ttfamily int() serialp\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes the serial port interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & pointer to the hook\+\_\+id\+\_\+serialp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8c_aef6b9501e2df0aca48c25239718191c7}\label{serialport_8c_aef6b9501e2df0aca48c25239718191c7}} 
+\index{serialport.c@{serialport.c}!serialp\_unsubscribe\_int@{serialp\_unsubscribe\_int}}
+\index{serialp\_unsubscribe\_int@{serialp\_unsubscribe\_int}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{serialp\_unsubscribe\_int()}{serialp\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() serialp\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the serial port interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serialport_8c_a84789a9e59191b48170648424f170820}\label{serialport_8c_a84789a9e59191b48170648424f170820}} 
+\index{serialport.c@{serialport.c}!write\_address\_with\_offset@{write\_address\_with\_offset}}
+\index{write\_address\_with\_offset@{write\_address\_with\_offset}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{write\_address\_with\_offset()}{write\_address\_with\_offset()}}
+{\footnotesize\ttfamily int() write\+\_\+address\+\_\+with\+\_\+offset (\begin{DoxyParamCaption}\item[{int}]{offset,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes the parameter data to a certain address (address of COM1 + offset) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & of the address relative to the COM1 address \\
+\hline
+{\em data} & to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{serialport_8c_a325819a8e492ac69542e8b31705af6e9}\label{serialport_8c_a325819a8e492ac69542e8b31705af6e9}} 
+\index{serialport.c@{serialport.c}!data@{data}}
+\index{data@{data}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t data = 0x00}
+
+\mbox{\Hypertarget{serialport_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}\label{serialport_8c_a1d886b75c81ca76f409ee9a5e6e5cd70}} 
+\index{serialport.c@{serialport.c}!data\_x\_ball@{data\_x\_ball}}
+\index{data\_x\_ball@{data\_x\_ball}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{data\_x\_ball}{data\_x\_ball}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+x\+\_\+ball = 0x00}
+
+\mbox{\Hypertarget{serialport_8c_addc0f3d2badd6df1dd41088b117f16f5}\label{serialport_8c_addc0f3d2badd6df1dd41088b117f16f5}} 
+\index{serialport.c@{serialport.c}!data\_y\_ball@{data\_y\_ball}}
+\index{data\_y\_ball@{data\_y\_ball}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{data\_y\_ball}{data\_y\_ball}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+y\+\_\+ball = 0x00}
+
+\mbox{\Hypertarget{serialport_8c_ae057c73800980befa6db2c20c119a7f5}\label{serialport_8c_ae057c73800980befa6db2c20c119a7f5}} 
+\index{serialport.c@{serialport.c}!hook\_id\_serialp@{hook\_id\_serialp}}
+\index{hook\_id\_serialp@{hook\_id\_serialp}!serialport.c@{serialport.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id\_serialp}{hook\_id\_serialp}}
+{\footnotesize\ttfamily int hook\+\_\+id\+\_\+serialp = 4}
+

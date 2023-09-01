@@ -1,0 +1,14 @@
+<map id="C:/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/g3/proj/src/mvc" name="C:/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/g3/proj/src/mvc">
+<area shape="rect" id="node1" href="dir_1d6053c801fab5d2153992ba84c6834f.html" title="rtc" alt="" coords="26,128,65,155"/>
+<area shape="rect" id="node2" href="dir_3916d8b7e60f6011192d2bd9a1ea0739.html" title="serialport" alt="" coords="88,128,163,155"/>
+<area shape="rect" id="node3" href="dir_ab1f59485a986c2b15b77f5b461afb35.html" title="sprites" alt="" coords="187,128,248,155"/>
+<area shape="rect" id="node4" href="dir_cf895c1ed808af158264b2f3d8d7f8f0.html" title="gpu" alt="" coords="272,128,315,155"/>
+<area shape="rect" id="node5" href="dir_e770f3f75bf80830229ce7c0b80ceb32.html" title="kbd_mouse" alt="" coords="339,128,427,155"/>
+<area shape="rect" id="node6" href="dir_fccb7c8e561ef6b382a7ac8374a47954.html" title="mvc" alt="" coords="195,53,240,80"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000005_000008.html" title="2" alt="" coords="82,124,89,140"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000005_000009.html" title="1" alt="" coords="157,115,164,131"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000005_000011.html" title="40" alt="" coords="219,101,233,117"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000005_000002.html" title="2" alt="" coords="269,101,276,117"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000005_000003.html" title="2" alt="" coords="337,104,344,120"/>
+<area shape="rect" id="clust1" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" title="src" alt="" coords="16,16,437,165"/>
+</map>

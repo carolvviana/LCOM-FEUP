@@ -1,0 +1,5 @@
+<map id="kbc_ih" name="kbc_ih">
+<area shape="rect" id="node1" title="Reads the scancode from the output buffer." alt="" coords="5,5,65,32"/>
+<area shape="rect" id="node2" href="$kbd_8c.html#afa20398065dbe981924bee1887ec38f1" title="Reads the output buffer of the KBC for keyboard information." alt="" coords="113,5,296,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="344,5,434,32"/>
+</map>

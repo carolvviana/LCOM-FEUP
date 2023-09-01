@@ -1,0 +1,211 @@
+\hypertarget{mouse_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/kbd\+\_\+mouse/mouse.c File Reference}
+\label{mouse_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/kbd\_mouse/mouse.c}}
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+Include dependency graph for mouse.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{mouse_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mouse_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}{DEBUG\+\_\+\+MSG}}(str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{mouse_8c_adf8110bd3c7f35c866859f247eb1484c}{KBC\+\_\+read\+\_\+output\+\_\+mouse}} (uint8\+\_\+t port, uint8\+\_\+t $\ast$output)
+\begin{DoxyCompactList}\small\item\em Tries to read the KBC output buffer and stores it in the variable output. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8c_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Reads and stores the mouse packet. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_ab268c1a22ae38f5545d1e0daa9a5b258}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables Mouse interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes Mouse interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8c_aabb0fc34ade37c0596dd032fc37f8638}{mouse\+\_\+bytes\+\_\+to\+\_\+packet}} (struct packet $\ast$\mbox{\hyperlink{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}})
+\begin{DoxyCompactList}\small\item\em Saves the mouse packet in a struct. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a6e47b03ed89aa760792292a19d5c1c3d}{mouse\+\_\+write}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Writes a command to the KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct packet \mbox{\hyperlink{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a8884dab9d88cd6c24f21afc6c7144a7b}{byte\+\_\+index}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_addea07e4cbaf9574f38de24dcf0bf3cb}{mouse\+\_\+bytes}} \mbox{[}3\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a65b988e1163cc65c6d3e5562fbc36a98}{current\+\_\+byte}}
+\item 
+int \mbox{\hyperlink{mouse_8c_a37cad7cad93664f8a1ed1b0258fe958b}{mouse\+\_\+hook\+\_\+id}} = 2
+\item 
+bool \mbox{\hyperlink{mouse_8c_a1941ee58f72f8c4175b5a51fceb5f0c8}{packet\+\_\+parsed}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mouse_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}\label{mouse_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}} 
+\index{mouse.c@{mouse.c}!DEBUG\_MSG@{DEBUG\_MSG}}
+\index{DEBUG\_MSG@{DEBUG\_MSG}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MSG}{DEBUG\_MSG}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+MSG(\begin{DoxyParamCaption}\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8c_adf8110bd3c7f35c866859f247eb1484c}\label{mouse_8c_adf8110bd3c7f35c866859f247eb1484c}} 
+\index{mouse.c@{mouse.c}!KBC\_read\_output\_mouse@{KBC\_read\_output\_mouse}}
+\index{KBC\_read\_output\_mouse@{KBC\_read\_output\_mouse}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{KBC\_read\_output\_mouse()}{KBC\_read\_output\_mouse()}}
+{\footnotesize\ttfamily int() KBC\+\_\+read\+\_\+output\+\_\+mouse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Tries to read the KBC output buffer and stores it in the variable output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & variable that will store the mouse hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{mouse_8c_adf8110bd3c7f35c866859f247eb1484c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_aabb0fc34ade37c0596dd032fc37f8638}\label{mouse_8c_aabb0fc34ade37c0596dd032fc37f8638}} 
+\index{mouse.c@{mouse.c}!mouse\_bytes\_to\_packet@{mouse\_bytes\_to\_packet}}
+\index{mouse\_bytes\_to\_packet@{mouse\_bytes\_to\_packet}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_bytes\_to\_packet()}{mouse\_bytes\_to\_packet()}}
+{\footnotesize\ttfamily void() mouse\+\_\+bytes\+\_\+to\+\_\+packet (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{mouse\+\_\+packet }\end{DoxyParamCaption})}
+
+
+
+Saves the mouse packet in a struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+\_\+packet} & struct that will store the mouse packet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8c_a210374b50462acdedab00df64d5cea3c}\label{mouse_8c_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.c@{mouse.c}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads and stores the mouse packet. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a210374b50462acdedab00df64d5cea3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_ab268c1a22ae38f5545d1e0daa9a5b258}\label{mouse_8c_ab268c1a22ae38f5545d1e0daa9a5b258}} 
+\index{mouse.c@{mouse.c}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables Mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & variable that will store the mouse hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.c@{mouse.c}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes Mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8c_a6e47b03ed89aa760792292a19d5c1c3d}\label{mouse_8c_a6e47b03ed89aa760792292a19d5c1c3d}} 
+\index{mouse.c@{mouse.c}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int() mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & command to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a6e47b03ed89aa760792292a19d5c1c3d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mouse_8c_a8884dab9d88cd6c24f21afc6c7144a7b}\label{mouse_8c_a8884dab9d88cd6c24f21afc6c7144a7b}} 
+\index{mouse.c@{mouse.c}!byte\_index@{byte\_index}}
+\index{byte\_index@{byte\_index}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{byte\_index}{byte\_index}}
+{\footnotesize\ttfamily uint8\+\_\+t byte\+\_\+index = 0}
+
+\mbox{\Hypertarget{mouse_8c_a65b988e1163cc65c6d3e5562fbc36a98}\label{mouse_8c_a65b988e1163cc65c6d3e5562fbc36a98}} 
+\index{mouse.c@{mouse.c}!current\_byte@{current\_byte}}
+\index{current\_byte@{current\_byte}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{current\_byte}{current\_byte}}
+{\footnotesize\ttfamily uint8\+\_\+t current\+\_\+byte}
+
+\mbox{\Hypertarget{mouse_8c_addea07e4cbaf9574f38de24dcf0bf3cb}\label{mouse_8c_addea07e4cbaf9574f38de24dcf0bf3cb}} 
+\index{mouse.c@{mouse.c}!mouse\_bytes@{mouse\_bytes}}
+\index{mouse\_bytes@{mouse\_bytes}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_bytes}{mouse\_bytes}}
+{\footnotesize\ttfamily uint8\+\_\+t mouse\+\_\+bytes\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{mouse_8c_a37cad7cad93664f8a1ed1b0258fe958b}\label{mouse_8c_a37cad7cad93664f8a1ed1b0258fe958b}} 
+\index{mouse.c@{mouse.c}!mouse\_hook\_id@{mouse\_hook\_id}}
+\index{mouse\_hook\_id@{mouse\_hook\_id}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_hook\_id}{mouse\_hook\_id}}
+{\footnotesize\ttfamily int mouse\+\_\+hook\+\_\+id = 2}
+
+\mbox{\Hypertarget{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}\label{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}} 
+\index{mouse.c@{mouse.c}!mouse\_packet@{mouse\_packet}}
+\index{mouse\_packet@{mouse\_packet}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet}{mouse\_packet}}
+{\footnotesize\ttfamily struct packet mouse\+\_\+packet}
+
+\mbox{\Hypertarget{mouse_8c_a1941ee58f72f8c4175b5a51fceb5f0c8}\label{mouse_8c_a1941ee58f72f8c4175b5a51fceb5f0c8}} 
+\index{mouse.c@{mouse.c}!packet\_parsed@{packet\_parsed}}
+\index{packet\_parsed@{packet\_parsed}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{packet\_parsed}{packet\_parsed}}
+{\footnotesize\ttfamily bool packet\+\_\+parsed = false}
+

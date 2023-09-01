@@ -1,0 +1,5 @@
+<map id="rtc_update_real_time" name="rtc_update_real_time">
+<area shape="rect" id="node1" title="Updates the real_time_info struct with the current time." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a741d66be00b18bb3f387a996cdf3bf90" title="Converts the number in BCD to binary." alt="" coords="196,5,340,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="223,56,313,83"/>
+</map>

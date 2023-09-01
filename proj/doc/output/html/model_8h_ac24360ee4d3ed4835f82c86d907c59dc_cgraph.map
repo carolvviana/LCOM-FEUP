@@ -1,0 +1,4 @@
+<map id="switchPlayers" name="switchPlayers">
+<area shape="rect" id="node1" title="Switches the players." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$model_8c.html#aff8e7c0319beb75ae9773863d54d8458" title="Switches the color of the players." alt="" coords="156,5,288,32"/>
+</map>

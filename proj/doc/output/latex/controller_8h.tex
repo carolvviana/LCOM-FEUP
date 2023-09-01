@@ -1,0 +1,409 @@
+\hypertarget{controller_8h}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/mvc/controller.h File Reference}
+\label{controller_8h}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.h@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/mvc/controller.h}}
+{\ttfamily \#include \char`\"{}../gpu/gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../kbd\+\_\+mouse/kbd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../kbd\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../rtc/rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../serialport/serialport.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}viewer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for controller.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstate}{state}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{controller_8h_abc2b684fcc127e93aee54a3a45e25a7c}{REFRESH\+\_\+\+RATE}}~(60 / 30)
+\item 
+\#define \mbox{\hyperlink{controller_8h_ae0188c06a0b9870c90e05292f629c1d1}{DEBUG\+\_\+\+MSG}}(...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}{game\+\_\+states}} \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumerates the game states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8ae}{devices}} \{ \newline
+\mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea17ba9bae1b8d7e8d6c12d46ec58e0769}{TIMER}}
+, \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aead14e2514427609da194a72091721f4c7}{KEYBOARD}}
+, \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}}
+, \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea24073a11916b946561b8cb5c9dfe9bce}{RTC}}
+, \newline
+\mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea303393a7eb9e8c9e401f78471510cde3}{SERIALPORT}}
+ \}
+\begin{DoxyCompactList}\small\item\em I/O Devices used. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}{game\+\_\+states}} \{ \newline
+\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60ad03008f18d2c8eef7043f88285f6e112}{SINGLE\+\_\+\+PLAYER\+\_\+\+GAME}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a9cfcffdf6beb1710c6070a86a4251bc5}{MULTI\+\_\+\+PLAYER\+\_\+\+GAME}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a243297a16ab0d9b44d34b1b7511159ad}{WAITING\+\_\+\+CONNECTION}}
+, \newline
+\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acb9e6f410cf374803d7ff561a15bc4ef}{CREDITS}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acba52b1e8f4f19033175ea75a453388c}{GAME\+\_\+\+WIN}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a376c1b6a3f75d283a2efacf737438d61}{BLOCKED}}
+, \newline
+\mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a44107b3a6a5f3877d31c9946fb8bf911}{NONE\+\_\+\+STATE}}
+, \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerates the game states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{controller_8h_afa591ec10165f04e9291e6592a0f7510}{menu\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Initializes the game states. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_a37e49d800adbc835666794ce4e9cce58}{single\+Player\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the single player game state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_a512eab05844c70937d5eda8a40f47884}{waiting\+Connection\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the waiting connection state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_a9b32f04a33bcc2480d7a65173ff4634d}{multi\+Player\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the multi player game state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_a3436a32f39e1fc40a322fa92edb7c107}{credits\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the credits state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c}{game\+Over\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the game over state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_a6aaefbda93187a03caf0d0ebc62d09bc}{blocked\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the blocked state. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{controller_8h_ab2e074c3d3b5a78c93bcb0a574f95037}{game\+Win\+Controller}} (int device)
+\begin{DoxyCompactList}\small\item\em Controller of the game win state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstate}{state}} \mbox{\hyperlink{controller_8h_abcb256a1de87813aaeac21222883be6b}{game\+\_\+states\+\_\+list}} \mbox{[}11\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of game states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{controller_8h_ae0188c06a0b9870c90e05292f629c1d1}\label{controller_8h_ae0188c06a0b9870c90e05292f629c1d1}} 
+\index{controller.h@{controller.h}!DEBUG\_MSG@{DEBUG\_MSG}}
+\index{DEBUG\_MSG@{DEBUG\_MSG}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MSG}{DEBUG\_MSG}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+MSG(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{controller_8h_abc2b684fcc127e93aee54a3a45e25a7c}\label{controller_8h_abc2b684fcc127e93aee54a3a45e25a7c}} 
+\index{controller.h@{controller.h}!REFRESH\_RATE@{REFRESH\_RATE}}
+\index{REFRESH\_RATE@{REFRESH\_RATE}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{REFRESH\_RATE}{REFRESH\_RATE}}
+{\footnotesize\ttfamily \#define REFRESH\+\_\+\+RATE~(60 / 30)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{controller_8h_a291505fb8357052ba4633a91f137424a}\label{controller_8h_a291505fb8357052ba4633a91f137424a}} 
+\index{controller.h@{controller.h}!game\_state\_t@{game\_state\_t}}
+\index{game\_state\_t@{game\_state\_t}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_state\_t}{game\_state\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}{game\+\_\+states}} \mbox{\hyperlink{controller_8h_a291505fb8357052ba4633a91f137424a}{game\+\_\+state\+\_\+t}}}
+
+
+
+Enumerates the game states. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8ae}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8ae}} 
+\index{controller.h@{controller.h}!devices@{devices}}
+\index{devices@{devices}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{controller_8h_aa4b88f24716e66e8d41400b00e8ae8ae}{devices}}}
+
+
+
+I/O Devices used. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER@{TIMER}!controller.h@{controller.h}}\index{controller.h@{controller.h}!TIMER@{TIMER}}}\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea17ba9bae1b8d7e8d6c12d46ec58e0769}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea17ba9bae1b8d7e8d6c12d46ec58e0769}} 
+TIMER&Timer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYBOARD@{KEYBOARD}!controller.h@{controller.h}}\index{controller.h@{controller.h}!KEYBOARD@{KEYBOARD}}}\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aead14e2514427609da194a72091721f4c7}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aead14e2514427609da194a72091721f4c7}} 
+KEYBOARD&Keyboard. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOUSE@{MOUSE}!controller.h@{controller.h}}\index{controller.h@{controller.h}!MOUSE@{MOUSE}}}\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea6abd13b0a6bf7894c7ceb5ff45ddbc14}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea6abd13b0a6bf7894c7ceb5ff45ddbc14}} 
+MOUSE&Mouse. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTC@{RTC}!controller.h@{controller.h}}\index{controller.h@{controller.h}!RTC@{RTC}}}\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea24073a11916b946561b8cb5c9dfe9bce}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea24073a11916b946561b8cb5c9dfe9bce}} 
+RTC&RTC. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERIALPORT@{SERIALPORT}!controller.h@{controller.h}}\index{controller.h@{controller.h}!SERIALPORT@{SERIALPORT}}}\mbox{\Hypertarget{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea303393a7eb9e8c9e401f78471510cde3}\label{controller_8h_aa4b88f24716e66e8d41400b00e8ae8aea303393a7eb9e8c9e401f78471510cde3}} 
+SERIALPORT&Serial port. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}} 
+\index{controller.h@{controller.h}!game\_states@{game\_states}}
+\index{game\_states@{game\_states}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_states}{game\_states}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{controller_8h_ab0edca8721ed515bb9906f1c3e538c60}{game\+\_\+states}}}
+
+
+
+Enumerates the game states. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!controller.h@{controller.h}}\index{controller.h@{controller.h}!MENU@{MENU}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a4c40e60bc71a32b924ce1f08d57f9721}} 
+MENU&Main menu state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SINGLE\_PLAYER\_GAME@{SINGLE\_PLAYER\_GAME}!controller.h@{controller.h}}\index{controller.h@{controller.h}!SINGLE\_PLAYER\_GAME@{SINGLE\_PLAYER\_GAME}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60ad03008f18d2c8eef7043f88285f6e112}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60ad03008f18d2c8eef7043f88285f6e112}} 
+SINGLE\+\_\+\+PLAYER\+\_\+\+GAME&1 player game state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTI\_PLAYER\_GAME@{MULTI\_PLAYER\_GAME}!controller.h@{controller.h}}\index{controller.h@{controller.h}!MULTI\_PLAYER\_GAME@{MULTI\_PLAYER\_GAME}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a9cfcffdf6beb1710c6070a86a4251bc5}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a9cfcffdf6beb1710c6070a86a4251bc5}} 
+MULTI\+\_\+\+PLAYER\+\_\+\+GAME&2 player game state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAITING\_CONNECTION@{WAITING\_CONNECTION}!controller.h@{controller.h}}\index{controller.h@{controller.h}!WAITING\_CONNECTION@{WAITING\_CONNECTION}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a243297a16ab0d9b44d34b1b7511159ad}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a243297a16ab0d9b44d34b1b7511159ad}} 
+WAITING\+\_\+\+CONNECTION&Waiting connection state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CREDITS@{CREDITS}!controller.h@{controller.h}}\index{controller.h@{controller.h}!CREDITS@{CREDITS}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acb9e6f410cf374803d7ff561a15bc4ef}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acb9e6f410cf374803d7ff561a15bc4ef}} 
+CREDITS&Credits state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER@{GAME\_OVER}!controller.h@{controller.h}}\index{controller.h@{controller.h}!GAME\_OVER@{GAME\_OVER}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a871723195985a4ae22d7e10d99bf8a00}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a871723195985a4ae22d7e10d99bf8a00}} 
+GAME\+\_\+\+OVER&Game over state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_WIN@{GAME\_WIN}!controller.h@{controller.h}}\index{controller.h@{controller.h}!GAME\_WIN@{GAME\_WIN}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acba52b1e8f4f19033175ea75a453388c}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60acba52b1e8f4f19033175ea75a453388c}} 
+GAME\+\_\+\+WIN&Game win state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCKED@{BLOCKED}!controller.h@{controller.h}}\index{controller.h@{controller.h}!BLOCKED@{BLOCKED}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a376c1b6a3f75d283a2efacf737438d61}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a376c1b6a3f75d283a2efacf737438d61}} 
+BLOCKED&Blocked (can not play) state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE\_STATE@{NONE\_STATE}!controller.h@{controller.h}}\index{controller.h@{controller.h}!NONE\_STATE@{NONE\_STATE}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a44107b3a6a5f3877d31c9946fb8bf911}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a44107b3a6a5f3877d31c9946fb8bf911}} 
+NONE\+\_\+\+STATE&None state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!controller.h@{controller.h}}\index{controller.h@{controller.h}!EXIT@{EXIT}}}\mbox{\Hypertarget{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a7a10b5d68d31711288e1fe0fa17dbf4f}\label{controller_8h_ab0edca8721ed515bb9906f1c3e538c60a7a10b5d68d31711288e1fe0fa17dbf4f}} 
+EXIT&Exit state. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{controller_8h_a6aaefbda93187a03caf0d0ebc62d09bc}\label{controller_8h_a6aaefbda93187a03caf0d0ebc62d09bc}} 
+\index{controller.h@{controller.h}!blockedController@{blockedController}}
+\index{blockedController@{blockedController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{blockedController()}{blockedController()}}
+{\footnotesize\ttfamily void() blocked\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the blocked state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_a6aaefbda93187a03caf0d0ebc62d09bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_a3436a32f39e1fc40a322fa92edb7c107}\label{controller_8h_a3436a32f39e1fc40a322fa92edb7c107}} 
+\index{controller.h@{controller.h}!creditsController@{creditsController}}
+\index{creditsController@{creditsController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{creditsController()}{creditsController()}}
+{\footnotesize\ttfamily void() credits\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the credits state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_a3436a32f39e1fc40a322fa92edb7c107_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c}\label{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c}} 
+\index{controller.h@{controller.h}!gameOverController@{gameOverController}}
+\index{gameOverController@{gameOverController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{gameOverController()}{gameOverController()}}
+{\footnotesize\ttfamily void() game\+Over\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the game over state. 
+
+Controller of the game win state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_abc304eb85f7c63a2877fa71bd2dba25c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_ab2e074c3d3b5a78c93bcb0a574f95037}\label{controller_8h_ab2e074c3d3b5a78c93bcb0a574f95037}} 
+\index{controller.h@{controller.h}!gameWinController@{gameWinController}}
+\index{gameWinController@{gameWinController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{gameWinController()}{gameWinController()}}
+{\footnotesize\ttfamily void() game\+Win\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the game win state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_ab2e074c3d3b5a78c93bcb0a574f95037_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_afa591ec10165f04e9291e6592a0f7510}\label{controller_8h_afa591ec10165f04e9291e6592a0f7510}} 
+\index{controller.h@{controller.h}!menuController@{menuController}}
+\index{menuController@{menuController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{menuController()}{menuController()}}
+{\footnotesize\ttfamily void() menu\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Initializes the game states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_afa591ec10165f04e9291e6592a0f7510_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_a9b32f04a33bcc2480d7a65173ff4634d}\label{controller_8h_a9b32f04a33bcc2480d7a65173ff4634d}} 
+\index{controller.h@{controller.h}!multiPlayerController@{multiPlayerController}}
+\index{multiPlayerController@{multiPlayerController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{multiPlayerController()}{multiPlayerController()}}
+{\footnotesize\ttfamily void() multi\+Player\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the multi player game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_a9b32f04a33bcc2480d7a65173ff4634d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_a37e49d800adbc835666794ce4e9cce58}\label{controller_8h_a37e49d800adbc835666794ce4e9cce58}} 
+\index{controller.h@{controller.h}!singlePlayerController@{singlePlayerController}}
+\index{singlePlayerController@{singlePlayerController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{singlePlayerController()}{singlePlayerController()}}
+{\footnotesize\ttfamily void() single\+Player\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the single player game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_a37e49d800adbc835666794ce4e9cce58_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{controller_8h_a512eab05844c70937d5eda8a40f47884}\label{controller_8h_a512eab05844c70937d5eda8a40f47884}} 
+\index{controller.h@{controller.h}!waitingConnectionController@{waitingConnectionController}}
+\index{waitingConnectionController@{waitingConnectionController}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{waitingConnectionController()}{waitingConnectionController()}}
+{\footnotesize\ttfamily void() waiting\+Connection\+Controller (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})}
+
+
+
+Controller of the waiting connection state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device that signaled the interrupt \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8h_a512eab05844c70937d5eda8a40f47884_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{controller_8h_abcb256a1de87813aaeac21222883be6b}\label{controller_8h_abcb256a1de87813aaeac21222883be6b}} 
+\index{controller.h@{controller.h}!game\_states\_list@{game\_states\_list}}
+\index{game\_states\_list@{game\_states\_list}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_states\_list}{game\_states\_list}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structstate}{state}} game\+\_\+states\+\_\+list\mbox{[}11\mbox{]}}
+
+
+
+Array of game states. 
+

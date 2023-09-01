@@ -1,0 +1,6 @@
+<map id="draw_scores" name="draw_scores">
+<area shape="rect" id="node1" title="Draws the scores on the screen." alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9" title="Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the ..." alt="" coords="162,5,242,32"/>
+<area shape="rect" id="node4" href="$viewer_8c.html#a6136e29fbf92e275dc0f1000f550adc4" title="Auxiliar to get the image of the score." alt="" coords="148,56,256,83"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="304,5,386,32"/>
+</map>

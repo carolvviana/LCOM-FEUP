@@ -1,0 +1,5 @@
+<map id="checkBallCollision" name="checkBallCollision">
+<area shape="rect" id="node1" title="Checks if the ball is colliding with the player, and if so, returns the type of collision." alt="" coords="5,31,133,57"/>
+<area shape="rect" id="node2" href="$model_8c.html#aa4221ebebfd16ed05adc048c3f114cc3" title="Moves the player down, if possible." alt="" coords="181,5,301,32"/>
+<area shape="rect" id="node3" href="$model_8c.html#a6a9bb453b65dbb2c900ed07be1d20080" title="Moves the player up, if possible." alt="" coords="189,56,293,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="draw_game_win" name="draw_game_win">
+<area shape="rect" id="node1" title="Draws the game win menu on the screen." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9" title="Draws an XPM image on the screen. This function takes an XPM image and draws it on the screen at the ..." alt="" coords="167,5,247,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#aa75d96618132cccec2c977ae043d31fe" title="Draws a pixel in the given coordinates with the given color." alt="" coords="295,5,377,32"/>
+</map>

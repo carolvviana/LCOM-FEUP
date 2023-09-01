@@ -1,0 +1,170 @@
+\hypertarget{rtc_8c}{}\doxysection{C\+:/\+MINIX-\/\+LCOM/\+MINIX-\/\+LCOM/shared/g3/proj/src/rtc/rtc.c File Reference}
+\label{rtc_8c}\index{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/rtc/rtc.c@{C:/MINIX-\/LCOM/MINIX-\/LCOM/shared/g3/proj/src/rtc/rtc.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/utils.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for rtc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{rtc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rtc_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}{DEBUG\+\_\+\+MSG}}(str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}{rtc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em RTC\textquotesingle{}s interrupt handler to update real time information on struct. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}{rtc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribing to RTC interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a9d4850bb2a488644672d43287f160622}{rtc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unubscribing to RTC interrupts. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{rtc_8c_a741d66be00b18bb3f387a996cdf3bf90}{rtc\+\_\+convert\+\_\+to\+\_\+binary}} (uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Converts the number in BCD to binary. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a0e3f625df84fe91b6d348d24940445e8}{rtc\+\_\+update\+\_\+real\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Updates the \mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} struct with the current time. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a29b3c2445c0c4cc2e7d62a958406811f}{rtc\+\_\+check\+\_\+permission}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current hour blocks the user from playing (night time). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}{rtc\+\_\+hook\+\_\+id}} = \mbox{\hyperlink{rtc_8h_ab54f2d18b47b47a59f718e16099446e8}{RTC\+\_\+\+MASK}}
+\item 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} \mbox{\hyperlink{rtc_8c_a2bf886de29b41ce845aff9fbfac6807f}{rt\+\_\+info}}
+\item 
+int \mbox{\hyperlink{rtc_8c_a617a47c70795bcff659815ad0efd2266}{counter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rtc_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}\label{rtc_8c_af1206b4d3bda8c4c8c9257f369a9e9e1}} 
+\index{rtc.c@{rtc.c}!DEBUG\_MSG@{DEBUG\_MSG}}
+\index{DEBUG\_MSG@{DEBUG\_MSG}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MSG}{DEBUG\_MSG}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+MSG(\begin{DoxyParamCaption}\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_a29b3c2445c0c4cc2e7d62a958406811f}\label{rtc_8c_a29b3c2445c0c4cc2e7d62a958406811f}} 
+\index{rtc.c@{rtc.c}!rtc\_check\_permission@{rtc\_check\_permission}}
+\index{rtc\_check\_permission@{rtc\_check\_permission}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_check\_permission()}{rtc\_check\_permission()}}
+{\footnotesize\ttfamily int() rtc\+\_\+check\+\_\+permission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the current hour blocks the user from playing (night time). 
+
+\begin{DoxyReturn}{Returns}
+0 if user can play, 1 if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a741d66be00b18bb3f387a996cdf3bf90}\label{rtc_8c_a741d66be00b18bb3f387a996cdf3bf90}} 
+\index{rtc.c@{rtc.c}!rtc\_convert\_to\_binary@{rtc\_convert\_to\_binary}}
+\index{rtc\_convert\_to\_binary@{rtc\_convert\_to\_binary}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_convert\_to\_binary()}{rtc\_convert\_to\_binary()}}
+{\footnotesize\ttfamily uint8\+\_\+t() rtc\+\_\+convert\+\_\+to\+\_\+binary (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Converts the number in BCD to binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}\label{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}} 
+\index{rtc.c@{rtc.c}!rtc\_ih@{rtc\_ih}}
+\index{rtc\_ih@{rtc\_ih}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily void() rtc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+RTC\textquotesingle{}s interrupt handler to update real time information on struct. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a0b9ae809cf571f61e54712a23c65348e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}\label{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}} 
+\index{rtc.c@{rtc.c}!rtc\_subscribe\_int@{rtc\_subscribe\_int}}
+\index{rtc\_subscribe\_int@{rtc\_subscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribing to RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a9d4850bb2a488644672d43287f160622}\label{rtc_8c_a9d4850bb2a488644672d43287f160622}} 
+\index{rtc.c@{rtc.c}!rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}}
+\index{rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unubscribing to RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a0e3f625df84fe91b6d348d24940445e8}\label{rtc_8c_a0e3f625df84fe91b6d348d24940445e8}} 
+\index{rtc.c@{rtc.c}!rtc\_update\_real\_time@{rtc\_update\_real\_time}}
+\index{rtc\_update\_real\_time@{rtc\_update\_real\_time}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_update\_real\_time()}{rtc\_update\_real\_time()}}
+{\footnotesize\ttfamily int() rtc\+\_\+update\+\_\+real\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the \mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} struct with the current time. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{rtc_8c_a0e3f625df84fe91b6d348d24940445e8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8c_a617a47c70795bcff659815ad0efd2266}\label{rtc_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{rtc.c@{rtc.c}!counter@{counter}}
+\index{counter@{counter}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{rtc_8c_a2bf886de29b41ce845aff9fbfac6807f}\label{rtc_8c_a2bf886de29b41ce845aff9fbfac6807f}} 
+\index{rtc.c@{rtc.c}!rt\_info@{rt\_info}}
+\index{rt\_info@{rt\_info}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rt\_info}{rt\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} rt\+\_\+info}
+
+\mbox{\Hypertarget{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}\label{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}} 
+\index{rtc.c@{rtc.c}!rtc\_hook\_id@{rtc\_hook\_id}}
+\index{rtc\_hook\_id@{rtc\_hook\_id}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_hook\_id}{rtc\_hook\_id}}
+{\footnotesize\ttfamily int rtc\+\_\+hook\+\_\+id = \mbox{\hyperlink{rtc_8h_ab54f2d18b47b47a59f718e16099446e8}{RTC\+\_\+\+MASK}}}
+

@@ -1,0 +1,13 @@
+#Ignore labs folders
+lab0
+lab2
+lab3
+lab4
+lab5
+
+#Ignore .vscode folder
+.vscode
+
+#Ignore trace.txt
+proj/trace.txt
+

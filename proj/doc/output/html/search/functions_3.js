@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['decompressdata_0',['decompressData',['../model_8c.html#a65861515161a3ce23cdc350fec913d6b',1,'decompressData(uint8_t data, int decompressor):&#160;model.c'],['../model_8h.html#a65861515161a3ce23cdc350fec913d6b',1,'decompressData(uint8_t data, int decompressor):&#160;model.c']]],
+  ['downmenuoption_1',['downMenuOption',['../model_8c.html#a03ac2686f02afaf5aff513f60ba8047f',1,'downMenuOption():&#160;model.c'],['../model_8h.html#a03ac2686f02afaf5aff513f60ba8047f',1,'downMenuOption():&#160;model.c']]],
+  ['draw_5farena_2',['draw_arena',['../viewer_8c.html#aa893dae372893c0c5e18d64bef95c4fd',1,'draw_arena():&#160;viewer.c'],['../viewer_8h.html#aa893dae372893c0c5e18d64bef95c4fd',1,'draw_arena():&#160;viewer.c']]],
+  ['draw_5farena_5fmultiplayer_3',['draw_arena_multiplayer',['../viewer_8c.html#ace4a787485fde7f2051d0e29557f0ded',1,'draw_arena_multiplayer():&#160;viewer.c'],['../viewer_8h.html#ace4a787485fde7f2051d0e29557f0ded',1,'draw_arena_multiplayer():&#160;viewer.c']]],
+  ['draw_5fbackground_4',['draw_background',['../viewer_8c.html#a495eeaaf495298ec57be90643ed070ff',1,'draw_background(uint32_t *color):&#160;viewer.c'],['../viewer_8h.html#a495eeaaf495298ec57be90643ed070ff',1,'draw_background(uint32_t *color):&#160;viewer.c']]],
+  ['draw_5fball_5',['draw_ball',['../viewer_8c.html#a1b4d3b8e3ca33e20507f358be08f4645',1,'draw_ball(struct Ball *ball):&#160;viewer.c'],['../viewer_8h.html#a1b4d3b8e3ca33e20507f358be08f4645',1,'draw_ball(struct Ball *ball):&#160;viewer.c']]],
+  ['draw_5fblocked_6',['draw_blocked',['../viewer_8c.html#a7e16b9d0a30c3711187f7d710dbf507d',1,'draw_blocked():&#160;viewer.c'],['../viewer_8h.html#a7e16b9d0a30c3711187f7d710dbf507d',1,'draw_blocked():&#160;viewer.c']]],
+  ['draw_5fcredits_7',['draw_credits',['../viewer_8c.html#a76989dacbf445d8b567e056ab1ee26a1',1,'draw_credits():&#160;viewer.c'],['../viewer_8h.html#a76989dacbf445d8b567e056ab1ee26a1',1,'draw_credits():&#160;viewer.c']]],
+  ['draw_5fgame_5fover_8',['draw_game_over',['../viewer_8c.html#ae5c796a8b5a9ad109bec175e7ba17b21',1,'draw_game_over():&#160;viewer.c'],['../viewer_8h.html#ae5c796a8b5a9ad109bec175e7ba17b21',1,'draw_game_over():&#160;viewer.c']]],
+  ['draw_5fgame_5fwin_9',['draw_game_win',['../viewer_8c.html#a339183e6cac2eed6ab617075776050a3',1,'draw_game_win():&#160;viewer.c'],['../viewer_8h.html#a339183e6cac2eed6ab617075776050a3',1,'draw_game_win():&#160;viewer.c']]],
+  ['draw_5fhor_5fline_10',['draw_hor_line',['../gpu_8c.html#a98a97a5fd3cd26eb13cdcad7b2be6c05',1,'gpu.c']]],
+  ['draw_5fmenu_11',['draw_menu',['../viewer_8c.html#a8b436345808e86cfdb278061a65a0fe7',1,'draw_menu():&#160;viewer.c'],['../viewer_8h.html#a8b436345808e86cfdb278061a65a0fe7',1,'draw_menu():&#160;viewer.c']]],
+  ['draw_5fmouse_12',['draw_mouse',['../viewer_8c.html#a7312ae0798b69b9b882f214132f3125c',1,'draw_mouse():&#160;viewer.c'],['../viewer_8h.html#a7312ae0798b69b9b882f214132f3125c',1,'draw_mouse():&#160;viewer.c']]],
+  ['draw_5fpixel_13',['draw_pixel',['../gpu_8c.html#aa75d96618132cccec2c977ae043d31fe',1,'draw_pixel(uint16_t x, uint16_t y, uint32_t color):&#160;gpu.c'],['../gpu_8h.html#aa75d96618132cccec2c977ae043d31fe',1,'draw_pixel(uint16_t x, uint16_t y, uint32_t color):&#160;gpu.c']]],
+  ['draw_5fplayer_14',['draw_player',['../viewer_8c.html#a5029981aa4e2800c1a4214bdb3b433e6',1,'draw_player(struct Player *player):&#160;viewer.c'],['../viewer_8h.html#a5029981aa4e2800c1a4214bdb3b433e6',1,'draw_player(struct Player *player):&#160;viewer.c']]],
+  ['draw_5frect_15',['draw_rect',['../gpu_8c.html#a64d85a0174c3326d71ff220420c52ba8',1,'draw_rect(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color):&#160;gpu.c'],['../gpu_8h.html#a64d85a0174c3326d71ff220420c52ba8',1,'draw_rect(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color):&#160;gpu.c']]],
+  ['draw_5fscores_16',['draw_scores',['../viewer_8c.html#a2ec754b1d0db25cd334c6c2da3ee6954',1,'draw_scores():&#160;viewer.c'],['../viewer_8h.html#a2ec754b1d0db25cd334c6c2da3ee6954',1,'draw_scores():&#160;viewer.c']]],
+  ['draw_5ftime_17',['draw_time',['../viewer_8c.html#ac15d63a0b643d163c8843988fd299fec',1,'draw_time():&#160;viewer.c'],['../viewer_8h.html#ac15d63a0b643d163c8843988fd299fec',1,'draw_time():&#160;viewer.c']]],
+  ['draw_5fxpm_18',['draw_xpm',['../gpu_8c.html#a06c7e1cc7a6048d69cd7edb9af014bf9',1,'draw_xpm(xpm_image_t img, uint16_t x, uint16_t y, int flipped):&#160;gpu.c'],['../gpu_8h.html#ae99f7a2f4cd1bdb80497a1f6bb4f729d',1,'draw_xpm(xpm_image_t xpm, uint16_t x, uint16_t y, int flipped):&#160;gpu.c']]]
+];

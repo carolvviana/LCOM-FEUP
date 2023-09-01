@@ -1,0 +1,10 @@
+<map id="moveBall" name="moveBall">
+<area shape="rect" id="node1" title="Moves the ball in the correct direction depending if there was a collision or not." alt="" coords="5,93,79,120"/>
+<area shape="rect" id="node2" href="$model_8c.html#ac07055d4bad5e153b875d19461cd0026" title="Checks if the ball is colliding with the player, and if so, returns the type of collision." alt="" coords="127,43,254,69"/>
+<area shape="rect" id="node5" href="$model_8c.html#a0725ea9572d0cf8d99acb25a69a1427b" title="verifies if there was a goal" alt="" coords="161,93,220,120"/>
+<area shape="rect" id="node6" href="$model_8c.html#adca5c0e0a541bc88f8cada3b8f1fc237" title="Resets positions and determines initial velocity of the ball." alt="" coords="165,144,216,171"/>
+<area shape="rect" id="node3" href="$model_8c.html#aa4221ebebfd16ed05adc048c3f114cc3" title="Moves the player down, if possible." alt="" coords="302,5,422,32"/>
+<area shape="rect" id="node4" href="$model_8c.html#a6a9bb453b65dbb2c900ed07be1d20080" title="Moves the player up, if possible." alt="" coords="310,56,414,83"/>
+<area shape="rect" id="node7" href="$model_8c.html#ad2535f105d57912f0b1b2c5ab6ef03d4" title="Resets the positions of the players and the ball to their initial positions in the arena." alt="" coords="310,119,414,145"/>
+<area shape="rect" id="node8" href="$model_8c.html#a52de0aa82cf3bdff1c4a6a803bd29f6c" title="Resets the powerup to its default state." alt="" coords="312,169,412,196"/>
+</map>

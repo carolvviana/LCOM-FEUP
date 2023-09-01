@@ -1,6 +1,6 @@
 # Projeto de Avaliação
 ## Laboratório de Computadores
-### 2º Semestre, 2022/2023
+### 2º ano, 2º Semestre, 2022/2023
 
 - Membros:
   - Carolina Viana (up202108802@fe.up.pt)
